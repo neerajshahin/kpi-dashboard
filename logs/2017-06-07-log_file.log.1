@@ -1,0 +1,1414 @@
+[2017-06-07 06:55:19.738] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 06:55:21.073] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T07:04:58.568Z',
+     createdOn: 1496819098568,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496819098568,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 06:55:32.616] [DEBUG] AppRouter - inside callback
+[2017-06-07 06:55:32.616] [DEBUG] Controller - Auth Code:  ac439d09a9e5d7ce6fe45eb764e568f6
+[2017-06-07 06:55:32.616] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: 'ac439d09a9e5d7ce6fe45eb764e568f6',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 06:55:32.617] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 06:55:33.924] [DEBUG] Controller - after making call {"access_token":"2bf8cbe9e8c4c6bb9679345c776a24b4","token_type":"Bearer","expires_in":3600,"refresh_token":"57f9c679a4f9e31569e61ae533a37667","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIyNzExLCJpYXQiOjE0OTY4MTkxMTEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.VGr_9onEep0dL9brQoWld7sY5vpz2ahPxwkyVqVTNJQ"}
+[2017-06-07 06:55:33.930] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIyNzExLCJpYXQiOjE0OTY4MTkxMTEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.VGr_9onEep0dL9brQoWld7sY5vpz2ahPxwkyVqVTNJQ',
+  _refresh_token: '57f9c679a4f9e31569e61ae533a37667' }
+[2017-06-07 06:55:33.930] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIyNzExLCJpYXQiOjE0OTY4MTkxMTEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.VGr_9onEep0dL9brQoWld7sY5vpz2ahPxwkyVqVTNJQ
+[2017-06-07 06:55:33.931] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 06:55:36.936] [DEBUG] AppRouter - inside user router
+[2017-06-07 06:55:36.937] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 06:55:36.939] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIyNzExLCJpYXQiOjE0OTY4MTkxMTEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.VGr_9onEep0dL9brQoWld7sY5vpz2ahPxwkyVqVTNJQ
+[2017-06-07 06:55:36.942] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496822711,
+  iat: 1496819111,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 06:55:37.117] [DEBUG] AppRouter - inside user router
+[2017-06-07 06:55:37.118] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 06:55:37.118] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIyNzExLCJpYXQiOjE0OTY4MTkxMTEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.VGr_9onEep0dL9brQoWld7sY5vpz2ahPxwkyVqVTNJQ
+[2017-06-07 06:55:37.118] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496822711,
+  iat: 1496819111,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:02:25.673] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 07:02:25.674] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 07:02:25.675] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 07:02:26.943] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T07:12:04.466Z',
+     createdOn: 1496819524466,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496819524466,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 07:02:28.324] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 07:02:28.326] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 07:02:28.326] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 07:02:29.571] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T07:12:06.869Z',
+     createdOn: 1496819526869,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496819526869,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 07:02:29.873] [DEBUG] AppRouter - inside callback
+[2017-06-07 07:02:29.874] [DEBUG] Controller - Auth Code:  efe25747d9e831d1969a7fc18cd53543
+[2017-06-07 07:02:29.878] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: 'efe25747d9e831d1969a7fc18cd53543',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 07:02:29.880] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 07:02:31.003] [DEBUG] Controller - after making call {"access_token":"9073e6cc7fcb86783046c5019bede40f","token_type":"Bearer","expires_in":3600,"refresh_token":"d3e5afca651aa24d94c333d5be66efba","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMTI5LCJpYXQiOjE0OTY4MTk1MjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.3y9T33Ky-OBjmglHTy-RT3biTOGZImGqwLsNchocXPc"}
+[2017-06-07 07:02:31.011] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187',
+  isadmin: 'true',
+  party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMTI5LCJpYXQiOjE0OTY4MTk1MjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.3y9T33Ky-OBjmglHTy-RT3biTOGZImGqwLsNchocXPc',
+  _refresh_token: 'd3e5afca651aa24d94c333d5be66efba' }
+[2017-06-07 07:02:31.012] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMTI5LCJpYXQiOjE0OTY4MTk1MjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.3y9T33Ky-OBjmglHTy-RT3biTOGZImGqwLsNchocXPc
+[2017-06-07 07:02:31.012] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 07:02:32.727] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:02:32.727] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:02:32.727] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMTI5LCJpYXQiOjE0OTY4MTk1MjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.3y9T33Ky-OBjmglHTy-RT3biTOGZImGqwLsNchocXPc
+[2017-06-07 07:02:32.729] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496823129,
+  iat: 1496819529,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:02:32.902] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:02:32.902] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:02:32.902] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMTI5LCJpYXQiOjE0OTY4MTk1MjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.3y9T33Ky-OBjmglHTy-RT3biTOGZImGqwLsNchocXPc
+[2017-06-07 07:02:32.903] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496823129,
+  iat: 1496819529,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:05:56.308] [DEBUG] AppRouter - AppRouter : req.cookie {}
+[2017-06-07 07:05:56.309] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 07:05:56.309] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 07:05:57.502] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T07:15:35.087Z',
+     createdOn: 1496819735087,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496819735087,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 07:06:07.651] [DEBUG] AppRouter - inside callback
+[2017-06-07 07:06:07.654] [DEBUG] Controller - Auth Code:  bc1c81ead237613d487df8979cd74516
+[2017-06-07 07:06:07.656] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: 'bc1c81ead237613d487df8979cd74516',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 07:06:07.657] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 07:06:08.752] [DEBUG] Controller - after making call {"access_token":"c81bb2b22f08c64f6c8542e9675920c1","token_type":"Bearer","expires_in":3600,"refresh_token":"2cc2b2f295938876398a8050085c740f","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI"}
+[2017-06-07 07:06:08.760] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI',
+  _refresh_token: '2cc2b2f295938876398a8050085c740f' }
+[2017-06-07 07:06:08.764] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI
+[2017-06-07 07:06:08.765] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 07:06:11.606] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:06:11.606] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:06:11.606] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI
+[2017-06-07 07:06:11.607] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496823346,
+  iat: 1496819746,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:06:11.807] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:06:11.808] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:06:11.809] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI
+[2017-06-07 07:06:11.812] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496823346,
+  iat: 1496819746,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:06:29.116] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:06:29.116] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:06:29.116] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODIzMzQ2LCJpYXQiOjE0OTY4MTk3NDYsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.NCAfv840ArJ8vuRHOn3YJ4irugL6Dv9YsWyN36nDOQI
+[2017-06-07 07:06:29.116] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496823346,
+  iat: 1496819746,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:18:13.924] [DEBUG] AppRouter - AppRouter : req.cookie {}
+[2017-06-07 07:18:13.926] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 07:18:13.926] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 07:18:15.913] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T07:27:53.460Z',
+     createdOn: 1496820473460,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496820473460,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 07:18:29.892] [DEBUG] AppRouter - inside callback
+[2017-06-07 07:18:29.892] [DEBUG] Controller - Auth Code:  79d41ffae5d86043dd474aa8557df36f
+[2017-06-07 07:18:29.892] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: '79d41ffae5d86043dd474aa8557df36f',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 07:18:29.892] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 07:18:31.313] [DEBUG] Controller - after making call {"access_token":"ca954347e2333f69450545ba73aa8bc0","token_type":"Bearer","expires_in":3600,"refresh_token":"bf50e8a34c32d09b4fd7f98fdef956a6","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U"}
+[2017-06-07 07:18:31.319] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U',
+  _refresh_token: 'bf50e8a34c32d09b4fd7f98fdef956a6' }
+[2017-06-07 07:18:31.320] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U
+[2017-06-07 07:18:31.321] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 07:18:34.545] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:18:34.545] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:18:34.545] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U
+[2017-06-07 07:18:34.546] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496824089,
+  iat: 1496820489,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:18:34.701] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:18:34.701] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:18:34.701] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U
+[2017-06-07 07:18:34.701] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496824089,
+  iat: 1496820489,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 07:18:52.342] [DEBUG] AppRouter - inside user router
+[2017-06-07 07:18:52.343] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 07:18:52.344] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODI0MDg5LCJpYXQiOjE0OTY4MjA0ODksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.E23JXrkKBIGNqMh92J_aVoB5mdnHw_BG3CjoDu7od9U
+[2017-06-07 07:18:52.344] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496824089,
+  iat: 1496820489,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:22:54.352] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 08:22:54.357] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:22:54.359] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:22:56.396] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:26:14.545Z',
+     createdOn: 1496827574545,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496827574545,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:22:57.830] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 08:22:57.831] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:22:57.832] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:22:59.363] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:26:18.167Z',
+     createdOn: 1496827578167,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496827578167,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:22:59.851] [DEBUG] AppRouter - inside callback
+[2017-06-07 08:22:59.852] [DEBUG] Controller - Auth Code:  f4ba1697be8fd9b6aa79bcd96590d8c0
+[2017-06-07 08:22:59.853] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: 'f4ba1697be8fd9b6aa79bcd96590d8c0',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 08:22:59.854] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 08:23:01.593] [DEBUG] Controller - after making call {"access_token":"436d7fb15972faff95d38a94a1c5188a","token_type":"Bearer","expires_in":3600,"refresh_token":"ce6ff9597b26c1441b842c34c8b11b5a","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxMTgwLCJpYXQiOjE0OTY4Mjc1ODAsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.vmtiYbzjpm6uQ9C7k_bUvxgzRN-kbJFmHIKb0hhJnGc"}
+[2017-06-07 08:23:01.601] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187',
+  isadmin: 'true',
+  party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxMTgwLCJpYXQiOjE0OTY4Mjc1ODAsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.vmtiYbzjpm6uQ9C7k_bUvxgzRN-kbJFmHIKb0hhJnGc',
+  _refresh_token: 'ce6ff9597b26c1441b842c34c8b11b5a' }
+[2017-06-07 08:23:01.602] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxMTgwLCJpYXQiOjE0OTY4Mjc1ODAsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.vmtiYbzjpm6uQ9C7k_bUvxgzRN-kbJFmHIKb0hhJnGc
+[2017-06-07 08:23:01.602] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 08:23:03.378] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:23:03.378] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:23:03.378] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxMTgwLCJpYXQiOjE0OTY4Mjc1ODAsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.vmtiYbzjpm6uQ9C7k_bUvxgzRN-kbJFmHIKb0hhJnGc
+[2017-06-07 08:23:03.379] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831180,
+  iat: 1496827580,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:23:03.570] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:23:03.571] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:23:03.571] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxMTgwLCJpYXQiOjE0OTY4Mjc1ODAsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.vmtiYbzjpm6uQ9C7k_bUvxgzRN-kbJFmHIKb0hhJnGc
+[2017-06-07 08:23:03.571] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831180,
+  iat: 1496827580,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:24:27.403] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 08:24:27.404] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:24:27.404] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:24:29.513] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:27:48.404Z',
+     createdOn: 1496827668404,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496827668404,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:24:52.676] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true', party_id: '569' }
+[2017-06-07 08:24:52.676] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:24:52.679] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:25:00.034] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:28:18.913Z',
+     createdOn: 1496827698913,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496827698913,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:26:35.666] [DEBUG] AppRouter - inside callback
+[2017-06-07 08:26:35.667] [DEBUG] Controller - Auth Code:  0fb2a222fa45e629c4375a7342a1f3c5
+[2017-06-07 08:26:35.667] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: '0fb2a222fa45e629c4375a7342a1f3c5',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 08:26:35.667] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 08:26:42.434] [DEBUG] Controller - after making call {"access_token":"119b3024be55bde87410e73644b9681f","token_type":"Bearer","expires_in":3600,"refresh_token":"b5c76b8ce4e998c012865b4bc97150d4","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw"}
+[2017-06-07 08:26:42.442] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187',
+  isadmin: 'true',
+  party_id: '569',
+  email: 'henry.jacob@informa.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw',
+  _refresh_token: 'b5c76b8ce4e998c012865b4bc97150d4' }
+[2017-06-07 08:26:42.445] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw
+[2017-06-07 08:26:42.446] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 08:26:44.295] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:26:44.296] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:26:44.296] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw
+[2017-06-07 08:26:44.296] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '58ff02f331022210007c2a77',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831401,
+  iat: 1496827801,
+  user: 
+   { _id: '58ff02f331022210007c2a77',
+     username: 'henry.jacob@informa.com',
+     firstName: 'Henry Jacob',
+     lastName: '',
+     organization: 'Taylor and Francis',
+     email: 'henry.jacob@informa.com',
+     createdOn: 1493107443570,
+     displayName: 'Henry Jacob ',
+     isValidated: true,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:27:37.868] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '185',
+  isadmin: 'false',
+  party_id: '569',
+  email: 'henry.jacob@informa.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw',
+  _refresh_token: 'b5c76b8ce4e998c012865b4bc97150d4',
+  _ga: 'GA1.1.312141138.1496827789',
+  _gid: 'GA1.1.1141039800.1496827789',
+  _gat: '1' }
+[2017-06-07 08:27:37.869] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw
+[2017-06-07 08:27:37.869] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 08:27:39.841] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:27:39.842] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:27:39.843] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OGZmMDJmMzMxMDIyMjEwMDA3YzJhNzciLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNDAxLCJpYXQiOjE0OTY4Mjc4MDEsInVzZXIiOnsiX2lkIjoiNThmZjAyZjMzMTAyMjIxMDAwN2MyYTc3IiwidXNlcm5hbWUiOiJoZW5yeS5qYWNvYkBpbmZvcm1hLmNvbSIsImZpcnN0TmFtZSI6IkhlbnJ5IEphY29iIiwibGFzdE5hbWUiOiIiLCJvcmdhbml6YXRpb24iOiJUYXlsb3IgYW5kIEZyYW5jaXMiLCJlbWFpbCI6ImhlbnJ5LmphY29iQGluZm9ybWEuY29tIiwiY3JlYXRlZE9uIjoxNDkzMTA3NDQzNTcwLCJkaXNwbGF5TmFtZSI6IkhlbnJ5IEphY29iICIsImlzVmFsaWRhdGVkIjp0cnVlLCJfX3YiOjAsImFzc29jaWF0ZWRBY2NvdW50cyI6W10sIm9yZ2FuaXphdGlvbnMiOltdLCJ1c2VyVHlwZSI6InNob3BwZXIifSwiaXAiOiIifQ.JqPsgIaUkzyKjTfjpedyjUyZIC6j1krZZKL1oNGH1dw
+[2017-06-07 08:27:39.843] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '58ff02f331022210007c2a77',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831401,
+  iat: 1496827801,
+  user: 
+   { _id: '58ff02f331022210007c2a77',
+     username: 'henry.jacob@informa.com',
+     firstName: 'Henry Jacob',
+     lastName: '',
+     organization: 'Taylor and Francis',
+     email: 'henry.jacob@informa.com',
+     createdOn: 1493107443570,
+     displayName: 'Henry Jacob ',
+     isValidated: true,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:30:16.790] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '185', isadmin: 'false' }
+[2017-06-07 08:30:16.791] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:30:16.793] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:30:18.662] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:33:37.441Z',
+     createdOn: 1496828017441,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496828017441,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:30:27.959] [DEBUG] AppRouter - inside callback
+[2017-06-07 08:30:27.960] [DEBUG] Controller - Auth Code:  282438cf52909c12bd1557171e8c9e65
+[2017-06-07 08:30:27.961] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: '282438cf52909c12bd1557171e8c9e65',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 08:30:27.962] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 08:30:29.926] [DEBUG] Controller - after making call {"access_token":"30eca35aca1b1b14c4779bea4f8cbab5","token_type":"Bearer","expires_in":3600,"refresh_token":"e6461e1b5082d9107a67b2a53942c6db","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNjI5LCJpYXQiOjE0OTY4MjgwMjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.0RIdyiR-LacwDVNqdALtXsarzypgIHvVXA8VMYyo09E"}
+[2017-06-07 08:30:29.934] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '185',
+  isadmin: 'false',
+  party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNjI5LCJpYXQiOjE0OTY4MjgwMjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.0RIdyiR-LacwDVNqdALtXsarzypgIHvVXA8VMYyo09E',
+  _refresh_token: 'e6461e1b5082d9107a67b2a53942c6db' }
+[2017-06-07 08:30:29.937] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNjI5LCJpYXQiOjE0OTY4MjgwMjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.0RIdyiR-LacwDVNqdALtXsarzypgIHvVXA8VMYyo09E
+[2017-06-07 08:30:29.938] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 08:30:31.530] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:30:31.531] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:30:31.531] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNjI5LCJpYXQiOjE0OTY4MjgwMjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.0RIdyiR-LacwDVNqdALtXsarzypgIHvVXA8VMYyo09E
+[2017-06-07 08:30:31.535] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831629,
+  iat: 1496828029,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:30:31.668] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:30:31.668] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:30:31.679] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMxNjI5LCJpYXQiOjE0OTY4MjgwMjksInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.0RIdyiR-LacwDVNqdALtXsarzypgIHvVXA8VMYyo09E
+[2017-06-07 08:30:31.680] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496831629,
+  iat: 1496828029,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:36:13.355] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187', isadmin: 'true' }
+[2017-06-07 08:36:13.357] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 08:36:13.357] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 08:36:15.024] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T09:39:33.984Z',
+     createdOn: 1496828373984,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496828373984,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 08:37:21.333] [DEBUG] AppRouter - inside callback
+[2017-06-07 08:37:21.333] [DEBUG] Controller - Auth Code:  c6a175836f760a79e507f4ef20640324
+[2017-06-07 08:37:21.334] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: 'c6a175836f760a79e507f4ef20640324',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 08:37:21.334] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 08:37:22.496] [DEBUG] Controller - after making call {"access_token":"be1abbdd199388473b8804c5056af8a6","token_type":"Bearer","expires_in":3600,"refresh_token":"60914198aa50d09881284b00526da946","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMyMDQyLCJpYXQiOjE0OTY4Mjg0NDIsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.IXx2R7L477OkXNLKzRmw77SexCopNbR4CHfFonEn1wg"}
+[2017-06-07 08:37:22.506] [DEBUG] AppRouter - AppRouter : req.cookie { memberid: '187',
+  isadmin: 'true',
+  party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMyMDQyLCJpYXQiOjE0OTY4Mjg0NDIsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.IXx2R7L477OkXNLKzRmw77SexCopNbR4CHfFonEn1wg',
+  _refresh_token: '60914198aa50d09881284b00526da946' }
+[2017-06-07 08:37:22.507] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMyMDQyLCJpYXQiOjE0OTY4Mjg0NDIsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.IXx2R7L477OkXNLKzRmw77SexCopNbR4CHfFonEn1wg
+[2017-06-07 08:37:22.508] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 08:37:24.198] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:37:24.198] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:37:24.199] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMyMDQyLCJpYXQiOjE0OTY4Mjg0NDIsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.IXx2R7L477OkXNLKzRmw77SexCopNbR4CHfFonEn1wg
+[2017-06-07 08:37:24.199] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496832042,
+  iat: 1496828442,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 08:37:24.364] [DEBUG] AppRouter - inside user router
+[2017-06-07 08:37:24.365] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 08:37:24.365] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODMyMDQyLCJpYXQiOjE0OTY4Mjg0NDIsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.IXx2R7L477OkXNLKzRmw77SexCopNbR4CHfFonEn1wg
+[2017-06-07 08:37:24.365] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496832042,
+  iat: 1496828442,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 09:42:12.532] [DEBUG] AppRouter - AppRouter : req.cookie {}
+[2017-06-07 09:42:12.534] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:42:12.535] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:42:14.402] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:16:33.314Z',
+     createdOn: 1496834193314,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834193314,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:42:17.941] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569' }
+[2017-06-07 09:42:17.942] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:42:17.942] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:42:19.854] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:16:38.760Z',
+     createdOn: 1496834198760,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834198760,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:42:42.561] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569' }
+[2017-06-07 09:42:42.561] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:42:42.561] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:42:44.843] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:17:03.738Z',
+     createdOn: 1496834223738,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834223738,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:42:53.545] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569' }
+[2017-06-07 09:42:53.546] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:42:53.546] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:42:55.494] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:17:14.367Z',
+     createdOn: 1496834234367,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834234367,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:43:47.056] [DEBUG] AppRouter - AppRouter : req.cookie {}
+[2017-06-07 09:43:47.057] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:43:47.057] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:43:49.564] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:18:08.447Z',
+     createdOn: 1496834288447,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834288447,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:44:06.923] [DEBUG] AppRouter - inside callback
+[2017-06-07 09:44:06.924] [DEBUG] Controller - Auth Code:  2ec6e275c24fe59f56fb521a43468e89
+[2017-06-07 09:44:06.924] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: '2ec6e275c24fe59f56fb521a43468e89',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 09:44:06.925] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 09:44:08.416] [DEBUG] Controller - after making call {"access_token":"d85cc795f935c0d7e586d9914ccfa127","token_type":"Bearer","expires_in":3600,"refresh_token":"3daa1ccc7110f7557db01cd1c77ae147","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs"}
+[2017-06-07 09:44:08.421] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs',
+  _refresh_token: '3daa1ccc7110f7557db01cd1c77ae147' }
+[2017-06-07 09:44:08.422] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs
+[2017-06-07 09:44:08.423] [DEBUG] Controller - Controller : allowAccess
+[2017-06-07 09:44:11.466] [DEBUG] AppRouter - inside user router
+[2017-06-07 09:44:11.467] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 09:44:11.467] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs
+[2017-06-07 09:44:11.467] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496837907,
+  iat: 1496834307,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 09:44:11.650] [DEBUG] AppRouter - inside user router
+[2017-06-07 09:44:11.651] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 09:44:11.651] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs
+[2017-06-07 09:44:11.651] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496837907,
+  iat: 1496834307,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 09:44:29.241] [DEBUG] AppRouter - inside user router
+[2017-06-07 09:44:29.241] [DEBUG] Controller - Decode secret :  04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238
+[2017-06-07 09:44:29.241] [DEBUG] Controller - token :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM3OTA3LCJpYXQiOjE0OTY4MzQzMDcsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.kF_BD2SH0RxSTLBDWbSKZ_I2vvxttP_bhfkslczAXUs
+[2017-06-07 09:44:29.242] [DEBUG] Controller - decoded: Data :  { iss: 'https://accounts-dev.taylorfrancis.com/identity/',
+  sub: '591587e78ba3cb1000ebf702',
+  aud: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  exp: 1496837907,
+  iat: 1496834307,
+  user: 
+   { _id: '591587e78ba3cb1000ebf702',
+     username: 'billavaa@gmail.com',
+     firstName: 'arun billava',
+     email: 'billavaa@gmail.com',
+     createdOn: 1494583271596,
+     displayName: 'arun billava',
+     isValidated: true,
+     hasAcceptedTerms: false,
+     __v: 0,
+     associatedAccounts: [],
+     organizations: [],
+     userType: 'shopper' },
+  ip: '' }
+[2017-06-07 09:46:24.738] [DEBUG] AppRouter - AppRouter : req.cookie {}
+[2017-06-07 09:46:24.739] [DEBUG] Controller - Controller :  x-forwarded-for , ip , connection.remoteAddress =  undefined ::ffff:172.18.0.1 ::ffff:172.18.0.1
+[2017-06-07 09:46:24.740] [DEBUG] Controller - Controller : validateIP getHeaders { 'Content-Type': 'application/json',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  clientip: '38.127.198.2' } URL : https://api-dev.taylorandfrancis.com/v2/auth
+[2017-06-07 09:46:26.337] [DEBUG] Controller - Controller : validateIP : Response & body  { access_type: 'allow',
+  user: 
+   { _id: '5842de568e110314003192cd',
+     username: '38.127.198.2',
+     email: 'annonymous',
+     firstName: null,
+     lastName: null,
+     organization: '569',
+     jobTitle: '',
+     dob: '2017-06-07T11:20:45.275Z',
+     createdOn: 1496834445275,
+     isValidated: true,
+     registrationVerificationToken: '',
+     registrationVerificationTokenExpiry: 1496834445275,
+     language: 'English',
+     mobilePhone: '',
+     homePhone: '',
+     businessPhone: '',
+     fax: '',
+     address: 
+      { addressLine1: '',
+        addressLine2: '',
+        state: '',
+        city: '',
+        country: '',
+        zipCode: '' },
+     __v: 0,
+     id: '',
+     organizationName: null,
+     displayName: '',
+     hasAcceptedTerms: false,
+     ip: '38.127.198.2',
+     contact: null,
+     partySfdcId: null,
+     associatedAccounts: [],
+     organizations: null,
+     consents: [],
+     clients: [],
+     accessToken: [ [Object] ],
+     userType: 'ip' } }
+[2017-06-07 09:46:39.913] [DEBUG] AppRouter - inside callback
+[2017-06-07 09:46:39.913] [DEBUG] Controller - Auth Code:  807672550d1775179ee0977d4dbc8373
+[2017-06-07 09:46:39.913] [DEBUG] Controller - postData { grant_type: 'authorization_code',
+  client_id: 'd1a91f09cc52df5028f957442b17b9c9447496858eaf03962aac90301b0d6b69',
+  client_secret: '04635fdc31ce8c5c0dd4c435a4a9c73ef397056cc5a17f932d7684133fba3238',
+  code: '807672550d1775179ee0977d4dbc8373',
+  redirect_uri: 'http://localhost:3000/oadashboard/login/callback' }
+[2017-06-07 09:46:39.915] [DEBUG] Controller - postHeaders { 'Content-Type': 'application/json' }
+[2017-06-07 09:46:41.924] [DEBUG] Controller - after making call {"access_token":"d86e2deb03ebdee8eb9ce97e4faa24f2","token_type":"Bearer","expires_in":3600,"refresh_token":"01a9011375474158266e6aa1625a8d27","id_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM4MDYxLCJpYXQiOjE0OTY4MzQ0NjEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.otI8XRztju86cpIPb4niw9EAyLUOpfr9CS8r85ENFx4"}
+[2017-06-07 09:46:41.929] [DEBUG] AppRouter - AppRouter : req.cookie { party_id: '569',
+  email: 'billavaa@gmail.com',
+  _token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM4MDYxLCJpYXQiOjE0OTY4MzQ0NjEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.otI8XRztju86cpIPb4niw9EAyLUOpfr9CS8r85ENFx4',
+  _refresh_token: '01a9011375474158266e6aa1625a8d27' }
+[2017-06-07 09:46:41.930] [DEBUG] Controller - verifyAccessToken :  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FjY291bnRzLWRldi50YXlsb3JmcmFuY2lzLmNvbS9pZGVudGl0eS8iLCJzdWIiOiI1OTE1ODdlNzhiYTNjYjEwMDBlYmY3MDIiLCJhdWQiOiJkMWE5MWYwOWNjNTJkZjUwMjhmOTU3NDQyYjE3YjljOTQ0NzQ5Njg1OGVhZjAzOTYyYWFjOTAzMDFiMGQ2YjY5IiwiZXhwIjoxNDk2ODM4MDYxLCJpYXQiOjE0OTY4MzQ0NjEsInVzZXIiOnsiX2lkIjoiNTkxNTg3ZTc4YmEzY2IxMDAwZWJmNzAyIiwidXNlcm5hbWUiOiJiaWxsYXZhYUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJhcnVuIGJpbGxhdmEiLCJlbWFpbCI6ImJpbGxhdmFhQGdtYWlsLmNvbSIsImNyZWF0ZWRPbiI6MTQ5NDU4MzI3MTU5NiwiZGlzcGxheU5hbWUiOiJhcnVuIGJpbGxhdmEiLCJpc1ZhbGlkYXRlZCI6dHJ1ZSwiaGFzQWNjZXB0ZWRUZXJtcyI6ZmFsc2UsIl9fdiI6MCwiYXNzb2NpYXRlZEFjY291bnRzIjpbXSwib3JnYW5pemF0aW9ucyI6W10sInVzZXJUeXBlIjoic2hvcHBlciJ9LCJpcCI6IiJ9.otI8XRztju86cpIPb4niw9EAyLUOpfr9CS8r85ENFx4

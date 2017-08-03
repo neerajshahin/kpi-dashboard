@@ -1,0 +1,25 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [{
+        "name": "application",
+        "host": {
+            "sourcePath": "/var/log/tandf"
+        }
+    }],
+    "containerDefinitions": [{
+        "name": "<NAME>",
+        "image": "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/<NAME>:<TAG>",
+        "essential": true,
+        "memory": 2048,
+        "portMappings": [
+            {
+                "hostPort": 8200,
+                "containerPort": 3000
+            }
+        ],
+        "mountPoints": [{
+            "sourceVolume": "application",
+            "containerPath": "/logs"
+        }]
+    }]
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "sourceMap": true,
+    "mapRoot": "./dist",
+    "sourceRoot" : "./src"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./test/**/*.ts",
+    "!./node_modules/**/*.ts",
+    "typings/index.d.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

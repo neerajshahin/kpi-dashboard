@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ../data/postgres-data:/var/lib/postgresql/data
+  api:
+    build: ../oadashboard-api
+    command: bundle exec rails s -p 3001 -b '0.0.0.0'
+    volumes:
+      - ../oadashboard-api:/oadashboard-api
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV:local
+    depends_on:
+      - db
+  web:
+    build: .
+    command: npm run start:local
+    volumes:
+      - .:/oadashboard-web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    environment:
+      - NODE_ENV:local
+  worker:
+    image: oadashboardweb_api:latest
+    command: bundle exec rake jobs:work
+    volumes:
+      - ../oadashboard-api:/oadashboard-api
+    depends_on:
+      - db

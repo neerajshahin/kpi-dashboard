@@ -1,0 +1,60 @@
+{
+    "name": "tandf-pyramid-oa-dashboard-v1",
+    "description": "The Pyramid is a T&F project with the goal of creating a single platform that allows customers and consumer to access, read and manage content seamlessly from one T&F interface.",
+    "version": "1.0.0",
+    "private": true,
+    "author": "T&F Technology",
+    "license": "UNLICENSED",
+    "engines": {
+        "node": ">= 4.2.1",
+        "npm": ">= 3"
+    },
+
+    "scripts": {
+        "build:server": "cd server && npm run build",
+        "build:ui": "cd web-app && npm run build",
+        "build:uilocal": "cd web-app && npm run build:local",
+        "build:uidev": "cd web-app && npm run build:dev",
+        "build:uiuat": "cd web-app && npm run build:uat",
+        "build:uiprod": "cd web-app && npm run build:prod",
+        "build": "npm run build:server && npm run build:ui",
+        "build:local": "npm run build:server && npm run build:uilocal",
+        "build:dev": "npm run build:server && npm run build:ui",
+        "build:uat": "npm run build:server && npm run build:uiuat",
+        "build:prod": "npm run build:server && npm run build:uiprod",
+        "start": "cd server && npm start",
+        "start:local": "cd server && npm run server:local",
+        "start:dev": "cd server && npm run server:dev",
+        "start:uat": "cd server && npm run server:uat",
+        "start:prod": "cd server && npm run server:prod",
+        "clean:server": "cd server && npm run clean",
+        "clean:ui": "cd web-app && npm run clean",
+        "clean": "npm run clean:server && npm run clean:ui",
+        "install:typings": "cd server && typings install",
+        "install:server": "cd server && npm install",
+        "install:ui": "cd web-app && npm install",
+        "install": "npm run install:server && npm run install:ui && npm run install:typings",
+        "docker": "docker",
+        "docker:build": "docker build -t tandf-oadashboard-web:latest . && docker images",
+        "docker:commit": "docker commit -t tandf-oadashboard-web:latest . && docker images",
+        "docker:kill": "docker kill tandf-oadashboard-web-1 && docker ps",
+        "docker:remove": "npm run docker:rm && npm run docker:rmi",
+        "docker:rm": "npm run docker:kill && docker rm tandf-pyr-cust-web-1 && docker ps",
+        "docker:rmi": "docker rmi tandf-oadashboard-web:latest --force && docker ps",
+        "docker:run": "docker run --name tandf-pyr-cust-web-1 -P -d tandf-pyr-cust-web:latest && docker ps",
+        "docker:start": "npm run docker:build && npm run docker:run",
+        "docker:update": "npm run docker:remove && npm run docker:start",
+        "test:coverage": "npm run test",
+        "test:server": "cd server/dist && npm run test:coverage",
+        "test:ui": "cd web-app && npm test",
+        "test": "npm run test:ui && npm run test:server",
+        "e2e": "cd web-app && npm run e2e",
+        "typings": "typings"
+
+    },
+    "devDependencies": {
+        "tslint": "^4.2.0",
+        "jshint": "^2.9.4",
+        "commander": "^2.9.0"
+    }
+}

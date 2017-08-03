@@ -1,0 +1,28 @@
+{
+  "apps" : [{
+    "name"        : "OaDashboard website",
+    "script"      : "./server/dist/src/app.js",
+    "instances"    : "max",
+    "exec_mode" : "cluster",
+    "watch"       : false,
+    "error_file"      : "/var/log/tandf/oadashboard-website/error.log",
+    "out_file"        : "/var/log/tandf/oadashboard-website/out.log",
+    "merge_logs"      : true,
+    "log_date_format" : "YYYY-MM-DD HH:mm:ss Z",
+    "env_dev": {
+      "npm_package_config_environment": "dev"
+    },
+    "env_prod" : {
+       "npm_package_config_environment": "prod"
+    },
+    "env_local" : {
+       "npm_package_config_environment": "local"
+    },
+    "env_uat" : {
+       "npm_package_config_environment": "uat"
+    },
+    "env_test" : {
+       "npm_package_config_environment": "test"
+    }
+  }]
+}
