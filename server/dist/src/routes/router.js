@@ -23,4 +23,4 @@ var AppRouter = (function () {
     return AppRouter;
 }());
 module.exports = AppRouter;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/routes/router.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/routes/router.js.map

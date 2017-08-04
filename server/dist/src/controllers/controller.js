@@ -19,4 +19,4 @@ var Controller = (function () {
     return Controller;
 }());
 module.exports = Controller;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/controllers/controller.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/controllers/controller.js.map

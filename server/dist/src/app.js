@@ -34,4 +34,4 @@ app.listen(PORT, function () {
     log.info("Customer WEB API server listening on port %d in %s mode", PORT);
 });
 exports.App = app;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/app.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/app.js.map

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { WindowRef } from './services/Window';
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -65,6 +66,7 @@ type StoreType = {
   ],
   declarations: [APP_COMPONENTS],
   providers: [ // expose our Services and Providers into Angular's dependency injection
+    WindowRef,
     ENV_PROVIDERS,
     APP_PROVIDERS,
     {

@@ -39,4 +39,4 @@ var LogConfig = (function () {
     return LogConfig;
 }());
 module.exports = LogConfig;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/util/logconfig.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/util/logconfig.js.map

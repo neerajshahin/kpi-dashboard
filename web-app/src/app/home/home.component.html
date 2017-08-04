@@ -1,36 +1,97 @@
-<div class="col-lg-12 col-sm-12 col-xs-12">
-<div class="card-container">
-  <h1 x-large class="sample-content">Your Content Here</h1>
+<div class="container-fluid">
 
-  <div>
-    For material design components use the <a href="https://github.com/AngularClass/angular2-webpack-starter/tree/material2"><b>material2</b></a> branch
+  <div class="row col-lg-12 col-md-6">
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Informa Revenue</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart1 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Type</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart2 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Region</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart3 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Revenue by Region Division Level</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart4 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+  </div>
+  <!-- end row -->
+
+  <div class="row col-lg-12 col-md-6">
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Informa Dividend Pain</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart5 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">Journal Production time</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart6 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end col -->
+
+    <div class="col-lg-6 col-md-6">
+      <div class="card-box">
+        <h6 class="header-title m-t-0 m-b-30">abcdefghijklmnopqrstuvwxyz</h6>
+        <div class="widget-chart-1">
+          <div class="widget-chart-box-1">
+            <canvas #chart7 [style.height.px]="chartHeight"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end col -->
   </div>
 
-  <hr>
+  <!-- end row -->
 
-  <div>
-    For hot module reloading run
-    <pre>npm run start:hmr</pre>
-  </div>
-
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
-
-    <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
-
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
-
-      <button md-raised-button color="primary">Submit Value</button>
-    </form>
-  
-    <pre>this.localState = {{ localState | json }}</pre>
-
-  </div>
-</div>
 </div>

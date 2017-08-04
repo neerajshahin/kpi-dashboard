@@ -14,4 +14,4 @@ var APIRequest = (function () {
     return APIRequest;
 }());
 module.exports = APIRequest;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/util/api-request.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/util/api-request.js.map

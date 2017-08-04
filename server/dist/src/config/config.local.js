@@ -7,4 +7,4 @@ config.LOG_MAX_FILE_SIZE = "100000";
 config.LOG_NO_OF_BACKUPS = "10";
 config.LOG_ENABLE_CONSOLE_LOG = true;
 module.exports = config;
-//# sourceMappingURL=/Users/arunbillava/Projects/api-status/tnf-api-dashboard/server/dist/src/config/config.local.js.map
+//# sourceMappingURL=/Users/niks/Projects/kpi-dashboard/server/dist/src/config/config.local.js.map
