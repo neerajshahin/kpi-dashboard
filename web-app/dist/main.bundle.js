@@ -1998,7 +1998,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".container{\n    padding-left: 52px;\n    padding-right: 53px;\n}\n.navbar-site {\n    /* background-color: #006DB4; */\n    /* background-color: #10147E; */\n    background-color: rgb(76, 117, 179);\n    border: 0px;\n    margin-bottom: 0px;\n    z-index: 1;\n    box-shadow: 5px 5px 5px #24282b;\n   \n}\n\n.navbar-brand{\n    margin-right: 49px;\n    /* width: 186px; */\n    font-size: 28px;\n    margin-left: 0px;\n    font-weight: BOLD;\n    color: #ddd;\n    /* box-shadow: 10px 10px 5px #24282b; */\n}", ""]);
+exports.push([module.i, ".container{\n    padding-left: 52px;\n    padding-right: 53px;\n}\n.navbar-site {\n    background-color: #10147E; \n    border: 0px;\n    text-align: center;\n    margin-bottom: 0px;\n    z-index: 1;\n    box-shadow: 2px 2px 2px #24282b;\n   \n}\n\n.navbar-brand{\n    margin-right: 49px;\n    font-size: 28px;\n    margin-left: 0px;\n    width:100%;\n    color: #ddd;\n}", ""]);
 
 // exports
 
@@ -18913,7 +18913,7 @@ var InformaRevenueComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.yLabel;
+                            return "£ " + tooltipItem.yLabel;
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -19487,497 +19487,6 @@ exports.default = UIComponentsModule;
 
 /***/ },
 
-/***/ "./src/app/dummy/data.ts":
-/***/ function(module, exports) {
-
-"use strict";
-"use strict";
-exports.JSON_DATA = {
-    "DATA": {
-        "RevenueByType": {
-            "title": "RevenueByType",
-            "id": "revenue",
-            "Divisioninfo": {
-                "C1": "Academic Publishing",
-                "C2": "Business Intelligence",
-                "C3": "Global Exhibitions",
-                "C4": "Knowledge & Networking"
-            },
-            "Revenuebytype": {
-                "Subscriptions": {
-                    "C1": "245.2",
-                    "C2": "258.1",
-                    "C3": "",
-                    "C4": ""
-                },
-                "Unit Sales": {
-                    "C1": "242.2",
-                    "C2": "23.2",
-                    "C3": "",
-                    "C4": ""
-                },
-                "Advertising": {
-                    "C1": "242.2",
-                    "C2": "23.2",
-                    "C3": "",
-                    "C4": ""
-                },
-                "Exhibitor": {
-                    "C1": "",
-                    "C2": "",
-                    "C3": "6.138",
-                    "C4": "6.732"
-                },
-                "Attendee": {
-                    "C1": "",
-                    "C2": "",
-                    "C3": "36.828",
-                    "C4": "114.444"
-                },
-                "Sponsorship": {
-                    "C1": "",
-                    "C2": "",
-                    "C3": "27.621",
-                    "C4": "62.832"
-                },
-                "Total": {
-                    "Subscriptions": "503.30",
-                    "UnitSales": "268.40",
-                    "Advertising": "21.57",
-                    "Exhibitor": "276.71",
-                    "Attendee": "151.27",
-                    "Sponsorship": "90.45"
-                }
-            }
-        },
-        "Dividend": {
-            "title": "Dividend",
-            "id": "dividend",
-            "Companynfo": {
-                "C1": "Informa PLC",
-                "C2": "UBM",
-                "C3": "Pearson",
-                "C4": "Daily Mail & General Trust",
-                "C5": "ITE",
-                "C6": "Tarsus Group",
-                "C7": "Reed Elsevier"
-            },
-            "Years": {
-                "Yr2012": {
-                    "C1": "12.5",
-                    "C2": "26.7",
-                    "C3": "21.1",
-                    "C4": "11.7",
-                    "C5": "4.2",
-                    "C6": "6.8",
-                    "C7": "17"
-                },
-                "Yr2013": {
-                    "C1": "12.5",
-                    "C2": "27.2",
-                    "C3": "22.6",
-                    "C4": "12.4",
-                    "C5": "4.4",
-                    "C6": "7.3",
-                    "C7": "17.95"
-                },
-                "Yr2014": {
-                    "C1": "12.9",
-                    "C2": "22.8",
-                    "C3": "24.2",
-                    "C4": "13.3",
-                    "C5": "4.7",
-                    "C6": "7.8",
-                    "C7": "19"
-                },
-                "Yr2015": {
-                    "C1": "13.55",
-                    "C2": "21.6",
-                    "C3": "25.7",
-                    "C4": "14.2",
-                    "C5": "4.9",
-                    "C6": "8.4",
-                    "C7": "22.3"
-                },
-                "Yr2016": {
-                    "C1": "13.04",
-                    "C2": "22",
-                    "C3": "25.7",
-                    "C4": "14.9",
-                    "C5": "4.9",
-                    "C6": "9.1",
-                    "C7": "25.7"
-                }
-            }
-        },
-        "RevenueByRegion": {
-            "title": "RevenueByRegion",
-            "id": "revenue",
-            "Divisioninfo": {
-                "C1": "Academic Publishing",
-                "C2": "Business Intelligence",
-                "C3": "Global Exhibitions",
-                "C4": "Knowledge & Networking"
-            },
-            "RegionInfo": {
-                "R1": "UK",
-                "R2": "North America",
-                "R3": "Continental Europe",
-                "R4": "Rest of World"
-            },
-            "Region": {
-                "UK": {
-                    "C1": "63.752",
-                    "C2": "37.7",
-                    "C3": "3.069",
-                    "C4": "42.636"
-                },
-                "NA": {
-                    "C1": "250.104",
-                    "C2": "156.6",
-                    "C3": "122.76",
-                    "C4": "62.832"
-                },
-                "CE": {
-                    "C1": "58.848",
-                    "C2": "46.4",
-                    "C3": "33.739",
-                    "C4": "71.808"
-                },
-                "ROW": {
-                    "C1": "117.696",
-                    "C2": "49.3",
-                    "C3": "147.312",
-                    "C4": "47.124"
-                },
-                "Total": {
-                    "R1": "147.16",
-                    "R2": "592.30",
-                    "R3": "210.82",
-                    "R4": "361.43"
-                }
-            }
-        },
-        "InformaRevenue": {
-            "title": "InformaRevenue",
-            "id": "InformaRevenue",
-            "Divisioninfo": {
-                "C1": "2014",
-                "C2": "2015",
-                "C3": "2016"
-            },
-            "Revenue": {
-                "AcadamicPublishing": {
-                    "C1": "408.9",
-                    "C2": "447.4",
-                    "C3": "490.4"
-                },
-                "BusinessIntelligenence": {
-                    "C1": "281.7",
-                    "C2": "276.8",
-                    "C3": "290"
-                },
-                "GlobalExhibitions": {
-                    "C1": "200.2",
-                    "C2": "262.5",
-                    "C3": "306.9"
-                },
-                "KnowledgeNetworking": {
-                    "C1": "246.2",
-                    "C2": "225.5",
-                    "C3": "224.4"
-                }
-            }
-        },
-        "PublicationJourney": {
-            "title": "PublicationJourney",
-            "id": "Journey",
-            "Journeyinfo": {
-                "C1": "Feb",
-                "C2": "Mar",
-                "C3": "April",
-                "C4": "May",
-                "C5": "June"
-            },
-            "Journey": {
-                "wks0to3": {
-                    "C1": "28",
-                    "C2": "31",
-                    "C3": "31",
-                    "C4": "34",
-                    "C5": "39"
-                },
-                "wks3to5": {
-                    "C1": "24",
-                    "C2": "24",
-                    "C3": "25",
-                    "C4": "21",
-                    "C5": "20"
-                },
-                "wks5": {
-                    "C1": "48",
-                    "C2": "45",
-                    "C3": "44",
-                    "C4": "45",
-                    "C5": "41"
-                }
-            }
-        },
-        "SharePrice": {
-            "title": "SharePrice",
-            "id": "SharePrice",
-            "DaysCount": "7",
-            "Companycount": "7",
-            "Dates": {
-                "D1": "4-Aug",
-                "D2": "3-Aug",
-                "D3": "2-Aug",
-                "D4": "1-Aug",
-                "D5": "31-Jul",
-                "D6": "28-Jul",
-                "D7": "27-Jul",
-                "D8": "26-Jul",
-                "D9": "25-Jul",
-                "D10": "24-Jul",
-                "D11": "21-Jul",
-                "D12": "20-Jul",
-                "D13": "19-Jul",
-                "D14": "18-Jul",
-                "D15": "17-Jul",
-                "D16": "14-Jul",
-                "D17": "13-Jul",
-                "D18": "12-Jul",
-                "D19": "11-Jul",
-                "D20": "10-Jul",
-                "D21": "7-Jul",
-                "D22": "6-Jul",
-                "D23": "5-Jul"
-            },
-            "CompanyInfo": {
-                "C1": "Informa PLC",
-                "C2": "UBM",
-                "C3": "Reed Elsevier",
-                "C4": "Pearson",
-                "C5": "Daily Mail and General Trust",
-                "C6": "ITE",
-                "C7": "Tarsus Group"
-            },
-            "shareprice": {
-                "D1": {
-                    "C1": "710.50",
-                    "C2": "716.00",
-                    "C3": "17.98",
-                    "C4": "655.50",
-                    "C5": "652.00",
-                    "C6": "171.00",
-                    "C7": "311.50"
-                },
-                "D2": {
-                    "C1": "707.50",
-                    "C2": "714.00",
-                    "C3": "17.76",
-                    "C4": "669.00",
-                    "C5": "648.50",
-                    "C6": "168.50",
-                    "C7": "306.50"
-                },
-                "D3": {
-                    "C1": "702.00",
-                    "C2": "711.00",
-                    "C3": "17.79",
-                    "C4": "658.50",
-                    "C5": "645.50",
-                    "C6": "173.00",
-                    "C7": "302.75"
-                },
-                "D4": {
-                    "C1": "701.50",
-                    "C2": "716.50",
-                    "C3": "17.91",
-                    "C4": "660.00",
-                    "C5": "644.50",
-                    "C6": "175.50",
-                    "C7": "301.88"
-                },
-                "D5": {
-                    "C1": "695.50",
-                    "C2": "725.00",
-                    "C3": "17.78",
-                    "C4": "657.50",
-                    "C5": "636.50",
-                    "C6": "180.25",
-                    "C7": "300.50"
-                },
-                "D6": {
-                    "C1": "697.00",
-                    "C2": "705.50",
-                    "C3": "17.75",
-                    "C4": "667.00",
-                    "C5": "637.50",
-                    "C6": "178.25",
-                    "C7": "297.50"
-                },
-                "D7": {
-                    "C1": "702.00",
-                    "C2": "717.50",
-                    "C3": "18.00",
-                    "C4": "656.50",
-                    "C5": "636.00",
-                    "C6": "165.00",
-                    "C7": "296.25"
-                },
-                "D8": {
-                    "C1": "700.50",
-                    "C2": "715.00",
-                    "C3": "17.69",
-                    "C4": "643.00",
-                    "C5": "646.00",
-                    "C6": "160.00",
-                    "C7": "298.00"
-                },
-                "D9": {
-                    "C1": "694.00",
-                    "C2": "707.50",
-                    "C3": "17.61",
-                    "C4": "638.50",
-                    "C5": "638.00",
-                    "C6": "163.25",
-                    "C7": "299.13"
-                },
-                "D10": {
-                    "C1": "675.50",
-                    "C2": "696.00",
-                    "C3": "17.56",
-                    "C4": "639.00",
-                    "C5": "634.00",
-                    "C6": "164.25",
-                    "C7": "302.50"
-                },
-                "D11": {
-                    "C1": "675.00",
-                    "C2": "691.50",
-                    "C3": "17.62",
-                    "C4": "643.50",
-                    "C5": "634.50",
-                    "C6": "165.75",
-                    "C7": "297.00"
-                },
-                "D12": {
-                    "C1": "677.50",
-                    "C2": "696.00",
-                    "C3": "17.81",
-                    "C4": "642.00",
-                    "C5": "643.00",
-                    "C6": "165.00",
-                    "C7": "295.50"
-                },
-                "D13": {
-                    "C1": "675.50",
-                    "C2": "688.50",
-                    "C3": "17.80",
-                    "C4": "640.50",
-                    "C5": "642.50",
-                    "C6": "159.00",
-                    "C7": "299.13"
-                },
-                "D14": {
-                    "C1": "669.00",
-                    "C2": "687.50",
-                    "C3": "17.61",
-                    "C4": "630.00",
-                    "C5": "637.50",
-                    "C6": "162.00",
-                    "C7": "293.00"
-                },
-                "D15": {
-                    "C1": "667.00",
-                    "C2": "684.50",
-                    "C3": "17.71",
-                    "C4": "631.50",
-                    "C5": "638.00",
-                    "C6": "163.00",
-                    "C7": "289.50"
-                },
-                "D16": {
-                    "C1": "663.50",
-                    "C2": "684.00",
-                    "C3": "17.82",
-                    "C4": "635.50",
-                    "C5": "639.50",
-                    "C6": "165.00",
-                    "C7": "293.50"
-                },
-                "D17": {
-                    "C1": "664.50",
-                    "C2": "677.50",
-                    "C3": "17.76",
-                    "C4": "629.00",
-                    "C5": "635.50",
-                    "C6": "164.00",
-                    "C7": "293.75"
-                },
-                "D18": {
-                    "C1": "663.50",
-                    "C2": "680.00",
-                    "C3": "17.71",
-                    "C4": "624.00",
-                    "C5": "636.50",
-                    "C6": "152.00",
-                    "C7": "292.00"
-                },
-                "D19": {
-                    "C1": "661.00",
-                    "C2": "673.50",
-                    "C3": "17.53",
-                    "C4": "655.00",
-                    "C5": "636.50",
-                    "C6": "154.75",
-                    "C7": "288.13"
-                },
-                "D20": {
-                    "C1": "660.00",
-                    "C2": "675.50",
-                    "C3": "17.67",
-                    "C4": "690.50",
-                    "C5": "639.50",
-                    "C6": "154.75",
-                    "C7": "289.50"
-                },
-                "D21": {
-                    "C1": "658.00",
-                    "C2": "678.50",
-                    "C3": "17.60",
-                    "C4": "685.50",
-                    "C5": "648.00",
-                    "C6": "154.75",
-                    "C7": "285.50"
-                },
-                "D22": {
-                    "C1": "667.00",
-                    "C2": "678.50",
-                    "C3": "17.80",
-                    "C4": "691.00",
-                    "C5": "650.00",
-                    "C6": "155.00",
-                    "C7": "285.50"
-                },
-                "D23": {
-                    "C1": "666.00",
-                    "C2": "689.50",
-                    "C3": "18.05",
-                    "C4": "691.50",
-                    "C5": "657.00",
-                    "C6": "153.50",
-                    "C7": "281.50"
-                }
-            }
-        }
-    }
-};
-
-
-/***/ },
-
 /***/ "./src/app/environment.ts":
 /***/ function(module, exports, __webpack_require__) {
 
@@ -20092,7 +19601,6 @@ var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
 var dashboard_service_1 = __webpack_require__("./src/app/services/dashboard.service.ts");
 var Rx_1 = __webpack_require__("./node_modules/rxjs/Rx.js");
 var app_service_1 = __webpack_require__("./src/app/app.service.ts");
-var data_1 = __webpack_require__("./src/app/dummy/data.ts");
 var Home = (function () {
     // TypeScript public modifiers
     function Home(appState, apiDashboardServices, winRef, eleRef) {
@@ -20103,6 +19611,7 @@ var Home = (function () {
         // Set our default values
         this.localState = { value: '' };
         this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 3.4;
+        // should exopand div on click of expand icon
         this.onExpandClick = function (event) {
             if (!this.clicked) {
                 this.expandIcon = event.currentTarget;
@@ -20128,33 +19637,28 @@ var Home = (function () {
     }
     Home.prototype.ngOnInit = function () {
         var _this = this;
-        var data = data_1.JSON_DATA.DATA;
-        // console.log(this.carousel.nativeElement);
-        // this.carousel.nativeElement.carousel({
-        //   interval: 3000
-        // });
-        this.setDashBoardData(data);
-        // this.apiDashboardServices.getDashboardData().subscribe(response => {
-        //   if (response.status == 200) {
-        //     data = response.data.data;
-        //     console.log("dashboard: " + data);
-        //     this.setDashBoardData(data);
-        //   }
-        // }, err => {
-        //   console.log("failure: " + err);
-        // });
+        var data;
+        this.apiDashboardServices.getDashboardData().subscribe(function (response) {
+            if (response.status == 200) {
+                data = response.data.data;
+                console.log("dashboard: " + data);
+                _this.setDashBoardData(data);
+            }
+        }, function (err) {
+            console.log("failure: " + err);
+        });
         //Observable : calling service in every 10 sec to update latest data into dashboard
         Rx_1.Observable.interval(8000).subscribe(function (x) {
             _this.setDashBoardData(data);
-            // this.apiDashboardServices.getDashboardData().subscribe(response => {
-            //   if (response.status == 200) {
-            //     data = response.data.DATA;
-            //     console.log("dashboard: " + data);
-            //     this.setDashBoardData(data);
-            //   }
-            // }, err => {
-            //   console.log("failure: " + err);
-            // });
+            _this.apiDashboardServices.getDashboardData().subscribe(function (response) {
+                if (response.status == 200) {
+                    data = response.data.DATA;
+                    console.log("dashboard: " + data);
+                    _this.setDashBoardData(data);
+                }
+            }, function (err) {
+                console.log("failure: " + err);
+            });
         });
     };
     Home.prototype.submitState = function (value) {
@@ -20199,7 +19703,6 @@ var Home = (function () {
         }
         revenueData['labels'] = labels;
         revenueData['datasets'] = datasets;
-        // console.log("revenueData : " + JSON.stringify(revenueData));
         return revenueData;
     };
     //return informa dividend data
@@ -20227,7 +19730,6 @@ var Home = (function () {
         }
         dividendData['labels'] = labels;
         dividendData['datasets'] = datasets;
-        // console.log("dividendData : " + JSON.stringify(dividendData));
         return dividendData;
     };
     //return revenue by type data
@@ -20235,16 +19737,17 @@ var Home = (function () {
         var labels = Object.keys(revenueByType.Revenuebytype);
         var data = [];
         var revenueByTypeData = {};
-        for (var _i = 0, labels_1 = labels; _i < labels_1.length; _i++) {
-            var label = labels_1[_i];
-            if ('Total' != label) {
-                var total = revenueByType.Revenuebytype.Total[label.replace(/\s/g, '')];
+        for (var i = 0; i < labels.length; i++) {
+            if ('Total' != labels[i]) {
+                var total = revenueByType.Revenuebytype.Total[labels[i].replace(/\s/g, '')];
                 data.push(total);
+            }
+            else {
+                labels.splice(i, 1);
             }
         }
         revenueByTypeData['labels'] = labels;
         revenueByTypeData['data'] = data;
-        // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
         return revenueByTypeData;
     };
     //return revenue by region data
@@ -20260,7 +19763,6 @@ var Home = (function () {
         }
         revenueByRegionData['labels'] = labels;
         revenueByRegionData['data'] = data;
-        // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
         return revenueByRegionData;
     };
     //return revenue by region division level data
@@ -20290,7 +19792,6 @@ var Home = (function () {
         }
         revenueData['labels'] = labels;
         revenueData['datasets'] = datasets;
-        // console.log("revenueData : " + JSON.stringify(revenueData));
         return revenueData;
     };
     //return publication journey data
@@ -20349,7 +19850,6 @@ var Home = (function () {
         }
         shareData['labels'] = labels.reverse();
         shareData['datasets'] = datasets;
-        // console.log("revenueData : " + JSON.stringify(revenueData));
         return shareData;
     };
     //return jsonObject keys array
@@ -20413,15 +19913,8 @@ var Home = (function () {
             }
         });
     };
-    __decorate([
-        core_1.ViewChild('slide1'), 
-        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
-    ], Home.prototype, "carousel", void 0);
     Home = __decorate([
         core_1.Component({
-            // The selector is what angular internally uses
-            // for `document.querySelectorAll(selector)` in our index.html
-            // where, in this case, selector is the string 'home'
             selector: 'home',
             // Our list of styles in our component. We may add more to compose many styles together
             styles: [__webpack_require__("./src/app/home/home.component.css")],
@@ -20429,10 +19922,10 @@ var Home = (function () {
             template: __webpack_require__("./src/app/home/home.component.html"),
             providers: [dashboard_service_1.ApiDashboardServices]
         }), 
-        __metadata('design:paramtypes', [(typeof (_b = typeof app_service_1.AppState !== 'undefined' && app_service_1.AppState) === 'function' && _b) || Object, (typeof (_c = typeof dashboard_service_1.ApiDashboardServices !== 'undefined' && dashboard_service_1.ApiDashboardServices) === 'function' && _c) || Object, (typeof (_d = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _d) || Object, (typeof (_e = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _e) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof app_service_1.AppState !== 'undefined' && app_service_1.AppState) === 'function' && _a) || Object, (typeof (_b = typeof dashboard_service_1.ApiDashboardServices !== 'undefined' && dashboard_service_1.ApiDashboardServices) === 'function' && _b) || Object, (typeof (_c = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _c) || Object, (typeof (_d = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _d) || Object])
     ], Home);
     return Home;
-    var _a, _b, _c, _d, _e;
+    var _a, _b, _c, _d;
 }());
 exports.Home = Home;
 
@@ -20567,7 +20060,7 @@ var InformaDividendPaidComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.xLabel;
+                            return "£ " + tooltipItem.xLabel;
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -20693,7 +20186,7 @@ var InformaPublicationJourneyComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.yLabel;
+                            return tooltipItem.yLabel + " %";
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -20807,7 +20300,7 @@ var InformaRevenuebyRegionComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+                            return "£ " + Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
                         }
                     }
                 }
@@ -20903,8 +20396,9 @@ var InformaRevenuebyTypeComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
-                        }
+                            return "£ " + Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+                        },
+                        position: 'outside'
                     }
                 },
                 maintainAspectRatio: false
@@ -21033,7 +20527,7 @@ var InformaRevenuebyRegionDivLevelComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.xLabel;
+                            return "£ " + tooltipItem.xLabel;
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -21186,7 +20680,7 @@ var InformaSharePriceComponent = (function () {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.yLabel;
+                            return "£ " + tooltipItem.yLabel;
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -21205,8 +20699,9 @@ var InformaSharePriceComponent = (function () {
                             display: true,
                             stacked: false,
                             ticks: {
-                                beginAtZero: false,
-                                padding: 30,
+                                beginAtZero: true,
+                                max: 800,
+                                stepSize: 200,
                                 fontColor: "#000",
                             }
                         }]

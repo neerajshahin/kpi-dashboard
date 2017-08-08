@@ -100,7 +100,7 @@ export class InformaRevenuebyRegionDivLevelComponent {
           callbacks: {
             // use label callback to return the desired label
             label: function (tooltipItem, data) {
-              return tooltipItem.xLabel;
+              return "£ "+tooltipItem.xLabel;
             },
             title: function (tooltipItem, data) {
               return;

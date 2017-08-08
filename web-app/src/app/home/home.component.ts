@@ -7,11 +7,7 @@ import { AppState } from '../app.service';
 import { JSON_DATA } from '../dummy/data';
 
 @Component({
-  // The selector is what angular internally uses
-  // for `document.querySelectorAll(selector)` in our index.html
-  // where, in this case, selector is the string 'home'
   selector: 'home',  // <home></home>
-
   // Our list of styles in our component. We may add more to compose many styles together
   styleUrls: ['./home.component.css'],
   // Every Angular template is first compiled by the browser before Angular runs it's compiler
@@ -19,8 +15,6 @@ import { JSON_DATA } from '../dummy/data';
   providers: [ApiDashboardServices]
 })
 export class Home {
-
-  @ViewChild('slide1') private carousel: ElementRef;
   // Set our default values
   localState = { value: '' };
   chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 3.4;
@@ -45,34 +39,29 @@ export class Home {
   }
 
   ngOnInit() {
-    let data = JSON_DATA.DATA;
-    // console.log(this.carousel.nativeElement);
-    // this.carousel.nativeElement.carousel({
-    //   interval: 3000
-    // });
-    this.setDashBoardData(data);
-    // this.apiDashboardServices.getDashboardData().subscribe(response => {
-    //   if (response.status == 200) {
-    //     data = response.data.data;
-    //     console.log("dashboard: " + data);
-    //     this.setDashBoardData(data);
-    //   }
-    // }, err => {
-    //   console.log("failure: " + err);
-    // });
+    let data;
+    this.apiDashboardServices.getDashboardData().subscribe(response => {
+      if (response.status == 200) {
+        data = response.data.data;
+        console.log("dashboard: " + data);
+        this.setDashBoardData(data);
+      }
+    }, err => {
+      console.log("failure: " + err);
+    });
 
     //Observable : calling service in every 10 sec to update latest data into dashboard
     Observable.interval(8000).subscribe(x => {
       this.setDashBoardData(data);
-      // this.apiDashboardServices.getDashboardData().subscribe(response => {
-      //   if (response.status == 200) {
-      //     data = response.data.DATA;
-      //     console.log("dashboard: " + data);
-      //     this.setDashBoardData(data);
-      //   }
-      // }, err => {
-      //   console.log("failure: " + err);
-      // });
+      this.apiDashboardServices.getDashboardData().subscribe(response => {
+        if (response.status == 200) {
+          data = response.data.DATA;
+          console.log("dashboard: " + data);
+          this.setDashBoardData(data);
+        }
+      }, err => {
+        console.log("failure: " + err);
+      });
     });
 
   }
@@ -118,7 +107,6 @@ export class Home {
     }
     revenueData['labels'] = labels;
     revenueData['datasets'] = datasets;
-    // console.log("revenueData : " + JSON.stringify(revenueData));
     return revenueData;
   }
 
@@ -144,7 +132,6 @@ export class Home {
     }
     dividendData['labels'] = labels;
     dividendData['datasets'] = datasets;
-    // console.log("dividendData : " + JSON.stringify(dividendData));
     return dividendData;
   }
 
@@ -154,15 +141,16 @@ export class Home {
     let labels = Object.keys(revenueByType.Revenuebytype);
     let data = [];
     let revenueByTypeData = {};
-    for (let label of labels) {
-      if ('Total' != label) {
-        let total = revenueByType.Revenuebytype.Total[label.replace(/\s/g, '')];
+    for (let i = 0; i < labels.length; i++) {
+      if ('Total' != labels[i]) {
+        let total = revenueByType.Revenuebytype.Total[labels[i].replace(/\s/g, '')];
         data.push(total);
+      }else{
+        labels.splice(i, 1);
       }
     }
     revenueByTypeData['labels'] = labels;
     revenueByTypeData['data'] = data;
-    // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
     return revenueByTypeData;
   }
 
@@ -179,7 +167,6 @@ export class Home {
     }
     revenueByRegionData['labels'] = labels;
     revenueByRegionData['data'] = data;
-    // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
     return revenueByRegionData;
   }
 
@@ -207,7 +194,6 @@ export class Home {
     }
     revenueData['labels'] = labels;
     revenueData['datasets'] = datasets;
-    // console.log("revenueData : " + JSON.stringify(revenueData));
     return revenueData;
   }
 
@@ -266,7 +252,6 @@ export class Home {
     }
     shareData['labels'] = labels.reverse();
     shareData['datasets'] = datasets;
-    // console.log("revenueData : " + JSON.stringify(revenueData));
     return shareData;
   }
 
@@ -338,6 +323,7 @@ export class Home {
     });
   }
 
+  // should exopand div on click of expand icon
   onExpandClick = function (event) {
     if (!this.clicked) {
       this.expandIcon = event.currentTarget;

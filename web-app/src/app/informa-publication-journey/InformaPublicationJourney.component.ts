@@ -75,7 +75,7 @@ export class InformaPublicationJourneyComponent {
           callbacks: {
             // use label callback to return the desired label
             label: function (tooltipItem, data) {
-              return tooltipItem.yLabel;
+              return tooltipItem.yLabel+" %";
             },
             title: function (tooltipItem, data) {
               return;
