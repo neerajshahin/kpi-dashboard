@@ -110,14 +110,14 @@ export class InformaDividendPaidComponent {
         },
         scales: {
           xAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { display:false},
             display: true,
             scaleLabel: {
               display: false,
             }
           }],
           yAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { display:false},
             scaleLabel: {
               display: true,
             },

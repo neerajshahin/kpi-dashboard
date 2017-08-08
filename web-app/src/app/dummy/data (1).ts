@@ -1,4 +1,3 @@
-export const JSON_DATA:any=
 {
     "DATA": {
         "RevenueByType": {

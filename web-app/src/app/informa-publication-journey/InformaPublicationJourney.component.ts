@@ -54,15 +54,16 @@ export class InformaPublicationJourneyComponent {
         datasets: [{
           label: '',
           data: [],
+          
           backgroundColor: chartColors.clr1
         }, {
           label: '',
           data: [],
-          backgroundColor: chartColors.clr2
+          backgroundColor: chartColors.clr5
         }, {
           label: '',
           data: [],
-          backgroundColor: chartColors.clr3
+          backgroundColor: chartColors.clr4
         }],
 
       },
@@ -82,16 +83,45 @@ export class InformaPublicationJourneyComponent {
             }
           }
         },
+        // "animation": {
+        //     "duration": 1,
+        //     "onComplete": function () {
+        //       this.chart.le
+        //         var chartInstance = this.chart,
+        //             ctx = chartInstance.ctx;
+
+                    
+        //         ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        //         ctx.textAlign = 'center';
+        //         ctx.textBaseline = 'bottom';
+
+        //         this.data.datasets.forEach(function (dataset, i) {
+        //             var meta = chartInstance.controller.getDatasetMeta(i);
+        //             meta.data.forEach(function (bar, index) {
+        //                 var data = dataset.data[index] + "%";
+        //                 ctx.fillText(data, bar._model.x, bar._model.y+40);
+        //             });
+        //         });
+        //     }
+        // },
         // scaleLineColor: "white",
+        legend:{
+          labels:{
+            fontColor : '#000'
+          }
+        },
         scales: {
           xAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { //drawBorder :false,
+              display:false },
             stacked: true
           }],
           yAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { //drawBorder :false,
+              display:false},
             stacked: true,
             ticks: {
+              //display:false,
               beginAtZero: true,
               max: 100,
               stepSize: 10

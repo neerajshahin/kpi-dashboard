@@ -2013,7 +2013,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "/*styles for home content only*/\n.card-container {\n    /* padding: 15px; */\n    /* box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02); */\n    /* background-clip: padding-box;\n    margin-bottom: 20px; */\n    background-color: transparent;\n    padding: 0;\n}\n\nh6.header-title{\n    color: #fff;\n    font-size: 16px;\n    text-align: center;\n    vertical-align: middle;\n    line-height: 33px;\n}\n\n.card-box{\n    padding: 0;\n    background-color: #fff;\n}\n.card-box >  div.header{\n    /* box-shadow: 10px 10px 5px #24282b; */\n    background-color: #688fca;\n    margin-bottom: 15px;\n    vertical-align: middle;\n    text-align: center;\n    height: 30px;\n    \n    /* display: table-cell; */\n}\n\n.card-container {\n    padding: 0 5px 0 5px;\n}\n.card-container.fullscreen{\n    z-index: 9999;\n    width: 96%;\n    height: 82%;\n    position: fixed;\n    top: 6%;\n    left: 2%;\n    transition:all .3s ease;\n }\n\n.my-icon{\n    float: right;\n    display: none;\n    /* color: #2d5e88; */\n    color: #54d0c3;\n    font-size: 16px;\n    margin-top: -10px;\n    cursor: pointer;\n}\n\n.carousel{\n    overflow:hidden;\n    /* width:100%; */\n}\n.slides{\n    list-style:none;\n    /* position:relative; */\n    width:200% !important;\n    transition: 1s ease;\n    /* width:500%;  Number of panes * 100%  */\n    overflow:hidden;\n        /* Slide effect Animations*/\n    /* -moz-animation:carousel 30s infinite;\n    -webkit-animation:carousel 30s infinite; */\n    animation: carousel 20s linear infinite;\n\n}\n.card-panel{\n    position:relative;\n    top:-10px;\n}\n.slides > div{\n    /* position:relative; */\n    width: 50%;\n    float:left;\n    left: -5px;\n    position: relative;\n    /* 100 / number of panes */\n}\n.carousel img{\n    display:block;\n    width:100%;\n    max-width:100%;\n}\n.carousel h2{\n    margin-bottom: 0;\n    font-size:1em;\n    padding:1.5em 0.5em 1.5em 0.5em;\n    position:absolute;\n    right:0px;\n    bottom:0px;\n    left:0px;\n    text-align:center;\n    color:#fff;\n    background-color:rgba(0,0,0,0.75);\n    text-transform: uppercase;\n}\n\n@keyframes carousel{\n    0% {\n        transform: translateX(0%);\n    }\n    10% {\n        transform: translateX(0%);\n    }\n    20% {\n        transform: translateX(0%);\n    }\n    30% {\n        transform: translateX(0%);\n    }\n    40% {\n        transform: translateX(0%);\n    }\n    50% {\n        transform: translateX(-50%);\n    }\n    60% {\n        transform: translateX(-50%);\n    }\n    70% {\n        transform: translateX(-50%);\n    }\n    80% {\n        transform: translateX(-50%);\n    }\n    90% {\n        transform: translateX(-50%);\n    }\n    100% {\n        transform: translateX(0%);\n    }\n}\n    \n\n   \n\n", ""]);
+exports.push([module.i, "/*styles for home content only*/\n.card-container {\n    /* padding: 15px; */\n    /* box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02); */\n    /* background-clip: padding-box;\n    margin-bottom: 20px; */\n    background-color: transparent;\n    padding: 0;\n}\n\nh6.header-title{\n    color: #fff;\n    font-size: 16px;\n    text-align: center;\n    vertical-align: middle;\n    line-height: 33px;\n}\n\n.card-box{\n    padding: 0;\n    background-color: #fff;\n}\n.card-box >  div.header{\n    /* box-shadow: 10px 10px 5px #24282b; */\n    background-color: #688fca;\n    margin-bottom: 15px;\n    vertical-align: middle;\n    text-align: center;\n    height: 30px;\n    \n    /* display: table-cell; */\n}\n\n.card-container {\n    padding: 0 5px 0 5px;\n}\n.card-container.fullscreen{\n    z-index: 9999;\n    width: 96%;\n    height: 82%;\n    position: fixed;\n    top: 6%;\n    left: 2%;\n    transition:all .3s ease;\n }\n\n.my-icon{\n    float: right;\n    display: none;\n    /* color: #2d5e88; */\n    color: #54d0c3;\n    font-size: 16px;\n    margin-top: -10px;\n    cursor: pointer;\n}\n\n.carousel{\n    overflow:hidden;\n    /* width:100%; */\n}\n.slides{\n    list-style:none;\n    /* position:relative; */\n    width:200% !important;\n    transition: 1s ease;\n    /* width:500%;  Number of panes * 100%  */\n    overflow:hidden;\n        /* Slide effect Animations*/\n    /* -moz-animation:carousel 30s infinite;\n    -webkit-animation:carousel 30s infinite; */\n    animation: carousel 20s linear infinite;\n\n}\n.card-panel{\n    position:relative;\n    top:-10px;\n}\n.slides > div{\n    /* position:relative; */\n    width: 50%;\n    float:left;\n    /* left: -5px; */\n    position: relative;\n    /* 100 / number of panes */\n}\n.carousel img{\n    display:block;\n    width:100%;\n    max-width:100%;\n}\n.carousel h2{\n    margin-bottom: 0;\n    font-size:1em;\n    padding:1.5em 0.5em 1.5em 0.5em;\n    position:absolute;\n    right:0px;\n    bottom:0px;\n    left:0px;\n    text-align:center;\n    color:#fff;\n    background-color:rgba(0,0,0,0.75);\n    text-transform: uppercase;\n}\n\n@keyframes carousel{\n    0% {\n        transform: translateX(0%);\n    }\n    10% {\n        transform: translateX(0%);\n    }\n    20% {\n        transform: translateX(0%);\n    }\n    30% {\n        transform: translateX(0%);\n    }\n    40% {\n        transform: translateX(0%);\n    }\n    50% {\n        transform: translateX(-50%);\n    }\n    60% {\n        transform: translateX(-50%);\n    }\n    70% {\n        transform: translateX(-50%);\n    }\n    80% {\n        transform: translateX(-50%);\n    }\n    90% {\n        transform: translateX(-50%);\n    }\n    100% {\n        transform: translateX(0%);\n    }\n}\n    \n\n   \n\n", ""]);
 
 // exports
 
@@ -18923,14 +18923,15 @@ var InformaRevenueComponent = (function () {
                 // scaleLineColor: "white",
                 scales: {
                     xAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { drawBorder: false, display: false },
                             stacked: true
                         }],
                     yAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { drawBorder: false, display: false },
                             stacked: true,
                             ticks: {
-                                beginAtZero: true,
+                                display: false,
+                                beginAtZero: false,
                                 max: 1400,
                                 stepSize: 200
                             }
@@ -19586,7 +19587,7 @@ exports.ActivateOnAccessToken = ActivateOnAccessToken;
 /***/ "./src/app/home/home.component.html":
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenue class=\"card-wrapper\" [data]=\"revenue\"></informaRevenue>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Dividend Paid Comparison</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaDividendPaid class=\"card-wrapper\" [data]=\"dividend\"></informaDividendPaid>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6\">\n      <div class=\"card-panel\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Type (2016)</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaRevenuebyType class=\"card-wrapper\" [data]=\"revenueByType\"></informaRevenuebyType>\n          </div>\n        </div>\n      </div>\n      </div>\n\n    </div>\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Region (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegion class=\"card-wrapper\"[data]=\"revenueByRegion\"></informaRevenuebyRegion>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Group (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegionDivLevel class=\"card-wrapper\" [data]=\"revenuebyRegionDivLevel \"></informaRevenuebyRegionDivLevel>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n  </div>\n  <!-- end row -->\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-6 col-md-6\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Publication Journey</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaPublicationJourney class=\"card-wrapper\" [data]=\"publicationJourney\"></informaPublicationJourney>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-6 col-md-12\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Share Price</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaSharePrice class=\"card-wrapper\" [data]=\"sharePrice\"></informaSharePrice>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- end col -->\n  </div>\n\n  <!-- end row -->\n\n</div>"
+module.exports = "<div class=\"container-fluid\">\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenue class=\"card-wrapper\" [data]=\"revenue\"></informaRevenue>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Dividend Paid Comparison</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaDividendPaid class=\"card-wrapper\" [data]=\"dividend\"></informaDividendPaid>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6\">\n      <div class=\"card-panel\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Type (2016)</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaRevenuebyType class=\"card-wrapper\" [data]=\"revenueByType\"></informaRevenuebyType>\n          </div>\n        </div>\n      </div>\n      </div>\n\n    </div>\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Region (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegion class=\"card-wrapper\"[data]=\"revenueByRegion\"></informaRevenuebyRegion>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Group (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegionDivLevel class=\"card-wrapper\" [data]=\"revenuebyRegionDivLevel \"></informaRevenuebyRegionDivLevel>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n  </div>\n  <!-- end row -->\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-4 col-md-6\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Publication Journey</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaPublicationJourney class=\"card-wrapper\" [data]=\"publicationJourney\"></informaPublicationJourney>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-8 col-md-12\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Share Price</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaSharePrice class=\"card-wrapper\" [data]=\"sharePrice\"></informaSharePrice>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- end col -->\n  </div>\n\n  <!-- end row -->\n\n</div>"
 
 /***/ },
 
@@ -19638,6 +19639,8 @@ var Home = (function () {
     Home.prototype.ngOnInit = function () {
         var _this = this;
         var data;
+        // =JSON_DATA.DATA;
+        // this.setDashBoardData(data);
         this.apiDashboardServices.getDashboardData().subscribe(function (response) {
             if (response.status == 200) {
                 data = response.data.data;
@@ -19859,14 +19862,15 @@ var Home = (function () {
     };
     //set defult behavior for charts using chart plugin service
     Home.prototype.setChartPlugin = function () {
-        chart_js_1.Chart.defaults.global.defaultFontSize = 14;
-        //Chart.defaults.global.legend.fontColor = '#000';
+        chart_js_1.Chart.defaults.global.defaultFontSize = 12;
+        chart_js_1.Chart.defaults.global.defaultFontColor = '#000';
+        chart_js_1.Chart.defaults.global.legend.fontColor = '#000';
         chart_js_1.Chart.pluginService.register({
             beforeRender: function (chart) {
                 chart.options.legend.labels.boxWidth = 10;
                 chart.options.legend.labels.padding = 5;
                 chart.options.legend.position = "bottom";
-                chart.options.legend.labels.fontSize = 14;
+                chart.options.legend.labels.fontSize = 12;
                 chart.options.legend.labels.fontColor = "black";
                 chart.options.maintainAspectRatio = false;
                 if (chart.config.options.showAllTooltips) {
@@ -19928,6 +19932,241 @@ var Home = (function () {
     var _a, _b, _c, _d;
 }());
 exports.Home = Home;
+/**
+ * [Chart.PieceLabel.js]{@link https://github.com/emn178/Chart.PieceLabel.js}
+ *
+ * @version 0.7.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2017
+ * @license MIT
+ */
+(function () {
+    function PieceLabel() {
+        this.drawDataset = this.drawDataset.bind(this);
+    }
+    PieceLabel.prototype.beforeDatasetsUpdate = function (chartInstance) {
+        if (this.parseOptions(chartInstance) && this.position === 'outside') {
+            var padding = this.fontSize * 1.5 + 2;
+            chartInstance.chartArea.top += padding;
+            chartInstance.chartArea.bottom -= padding;
+        }
+    };
+    PieceLabel.prototype.afterDatasetsDraw = function (chartInstance) {
+        if (!this.parseOptions(chartInstance)) {
+            return;
+        }
+        this.labelBounds = [];
+        chartInstance.config.data.datasets.forEach(this.drawDataset);
+    };
+    PieceLabel.prototype.drawDataset = function (dataset) {
+        var ctx = this.ctx;
+        var chartInstance = this.chartInstance;
+        var meta = dataset._meta[Object.keys(dataset._meta)[0]];
+        var totalPercentage = 0;
+        for (var i = 0; i < meta.data.length; i++) {
+            var element = meta.data[i], view = element._view, text;
+            //Skips label creation if value is zero and showZero is set
+            if (view.circumference === 0 && !this.showZero) {
+                continue;
+            }
+            switch (this.render) {
+                case 'value':
+                    var value = dataset.data[i];
+                    if (this.format) {
+                        value = this.format(value);
+                    }
+                    text = value.toString();
+                    break;
+                case 'label':
+                    text = chartInstance.config.data.labels[i];
+                    break;
+                case 'percentage':
+                default:
+                    var percentage = view.circumference / this.options.circumference * 100;
+                    percentage = parseFloat(percentage.toFixed(this.precision));
+                    totalPercentage += percentage;
+                    if (totalPercentage > 100) {
+                        percentage -= totalPercentage - 100;
+                        // After adjusting the percentage, need to trim the numbers after decimal points again, otherwise it may not show
+                        // on chart due to very long number after decimal point.
+                        percentage = parseFloat(percentage.toFixed(this.precision));
+                    }
+                    text = percentage + '%';
+                    break;
+            }
+            if (typeof this.render === 'function') {
+                text = this.render({
+                    label: chartInstance.config.data.labels[i],
+                    value: dataset.data[i],
+                    percentage: percentage
+                });
+            }
+            ctx.save();
+            ctx.beginPath();
+            ctx.font = chart_js_1.Chart.helpers.fontString(this.fontSize, this.fontStyle, this.fontFamily);
+            var position, innerRadius, arcOffset;
+            if (this.position === 'outside' ||
+                this.position === 'border' && chartInstance.config.type === 'pie') {
+                innerRadius = view.outerRadius / 2;
+                var rangeFromCentre, offset = this.fontSize + 2, centreAngle = view.startAngle + ((view.endAngle - view.startAngle) / 2);
+                if (this.position === 'border') {
+                    rangeFromCentre = (view.outerRadius - innerRadius) / 2 + innerRadius;
+                }
+                else if (this.position === 'outside') {
+                    rangeFromCentre = (view.outerRadius - innerRadius) + innerRadius + offset;
+                }
+                position = {
+                    x: view.x + (Math.cos(centreAngle) * rangeFromCentre),
+                    y: view.y + (Math.sin(centreAngle) * rangeFromCentre)
+                };
+                if (this.position === 'outside') {
+                    if (position.x < view.x) {
+                        position.x -= offset;
+                    }
+                    else {
+                        position.x += offset;
+                    }
+                    arcOffset = view.outerRadius + offset;
+                }
+            }
+            else {
+                innerRadius = view.innerRadius;
+                position = element.tooltipPosition();
+            }
+            var fontColor = this.fontColor;
+            if (typeof this.fontColor !== 'string') {
+                fontColor = this.fontColor[i] || this.options.defaultFontColor;
+            }
+            if (this.arc) {
+                if (!arcOffset) {
+                    arcOffset = (innerRadius + view.outerRadius) / 2;
+                }
+                ctx.fillStyle = fontColor;
+                ctx.textBaseline = 'middle';
+                this.drawArcText(text, arcOffset, view, this.overlap);
+            }
+            else {
+                var drawable, mertrics = ctx.measureText(text), left = position.x - mertrics.width / 2, right = position.x + mertrics.width / 2, top = position.y - this.fontSize / 2, bottom = position.y + this.fontSize / 2;
+                if (this.overlap) {
+                    drawable = true;
+                }
+                else if (this.position === 'outside') {
+                    drawable = this.checkTextBound(left, right, top, bottom);
+                }
+                else {
+                    drawable = element.inRange(left, top) && element.inRange(left, bottom) &&
+                        element.inRange(right, top) && element.inRange(right, bottom);
+                }
+                if (drawable) {
+                    ctx.fillStyle = fontColor;
+                    ctx.textBaseline = 'top';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(text, position.x, position.y - this.fontSize / 2);
+                }
+            }
+            ctx.restore();
+        }
+    };
+    PieceLabel.prototype.parseOptions = function (chartInstance) {
+        var pieceLabel = chartInstance.options.pieceLabel;
+        if (pieceLabel) {
+            this.chartInstance = chartInstance;
+            this.ctx = chartInstance.chart.ctx;
+            this.options = chartInstance.config.options;
+            this.render = pieceLabel.render || pieceLabel.mode;
+            this.position = pieceLabel.position || 'default';
+            this.arc = pieceLabel.arc;
+            this.format = pieceLabel.format;
+            this.precision = pieceLabel.precision || 0;
+            this.fontSize = pieceLabel.fontSize || this.options.defaultFontSize;
+            this.fontColor = pieceLabel.fontColor || this.options.defaultFontColor;
+            this.fontStyle = pieceLabel.fontStyle || this.options.defaultFontStyle;
+            this.fontFamily = pieceLabel.fontFamily || this.options.defaultFontFamily;
+            this.hasTooltip = chartInstance.tooltip._active && chartInstance.tooltip._active.length;
+            this.showZero = pieceLabel.showZero;
+            this.overlap = pieceLabel.overlap;
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    PieceLabel.prototype.checkTextBound = function (left, right, top, bottom) {
+        var labelBounds = this.labelBounds;
+        for (var i = 0; i < labelBounds.length; ++i) {
+            var bound = labelBounds[i];
+            var potins = [
+                [left, top],
+                [left, bottom],
+                [right, top],
+                [right, bottom]
+            ];
+            for (var j = 0; j < potins.length; ++j) {
+                var x = potins[j][0];
+                var y = potins[j][1];
+                if (x >= bound.left && x <= bound.right && y >= bound.top && y <= bound.bottom) {
+                    return false;
+                }
+            }
+            potins = [
+                [bound.left, bound.top],
+                [bound.left, bound.bottom],
+                [bound.right, bound.top],
+                [bound.right, bound.bottom]
+            ];
+            for (var j = 0; j < potins.length; ++j) {
+                var x = potins[j][0];
+                var y = potins[j][1];
+                if (x >= left && x <= right && y >= top && y <= bottom) {
+                    return false;
+                }
+            }
+        }
+        labelBounds.push({
+            left: left,
+            right: right,
+            top: top,
+            bottom: bottom
+        });
+        return true;
+    };
+    PieceLabel.prototype.drawArcText = function (str, radius, view, overlap) {
+        var ctx = this.ctx, centerX = view.x, centerY = view.y, startAngle = view.startAngle, endAngle = view.endAngle;
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        var angleSize = endAngle - startAngle;
+        startAngle += Math.PI / 2;
+        endAngle += Math.PI / 2;
+        var mertrics = ctx.measureText(str);
+        startAngle += (endAngle - (mertrics.width / radius + startAngle)) / 2;
+        if (!overlap && endAngle - startAngle > angleSize) {
+            ctx.restore();
+            return;
+        }
+        ctx.rotate(startAngle);
+        for (var i = 0; i < str.length; i++) {
+            var char = str.charAt(i);
+            mertrics = ctx.measureText(char);
+            ctx.save();
+            ctx.translate(0, -1 * radius);
+            ctx.fillText(char, 0, 0);
+            ctx.restore();
+            ctx.rotate(mertrics.width / radius);
+        }
+        ctx.restore();
+    };
+    chart_js_1.Chart.pluginService.register({
+        beforeInit: function (chartInstance) {
+            chartInstance.pieceLabel = new PieceLabel();
+        },
+        beforeDatasetsUpdate: function (chartInstance) {
+            chartInstance.pieceLabel.beforeDatasetsUpdate(chartInstance);
+        },
+        afterDatasetsDraw: function (chartInstance) {
+            chartInstance.pieceLabel.afterDatasetsDraw(chartInstance);
+        }
+    });
+})();
 
 
 /***/ },
@@ -20069,14 +20308,14 @@ var InformaDividendPaidComponent = (function () {
                 },
                 scales: {
                     xAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { display: false },
                             display: true,
                             scaleLabel: {
                                 display: false,
                             }
                         }],
                     yAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { display: false },
                             scaleLabel: {
                                 display: true,
                             },
@@ -20170,11 +20409,11 @@ var InformaPublicationJourneyComponent = (function () {
                     }, {
                         label: '',
                         data: [],
-                        backgroundColor: chartColors.clr2
+                        backgroundColor: chartColors.clr5
                     }, {
                         label: '',
                         data: [],
-                        backgroundColor: chartColors.clr3
+                        backgroundColor: chartColors.clr4
                     }],
             },
             options: {
@@ -20193,16 +20432,42 @@ var InformaPublicationJourneyComponent = (function () {
                         }
                     }
                 },
+                // "animation": {
+                //     "duration": 1,
+                //     "onComplete": function () {
+                //       this.chart.le
+                //         var chartInstance = this.chart,
+                //             ctx = chartInstance.ctx;
+                //         ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                //         ctx.textAlign = 'center';
+                //         ctx.textBaseline = 'bottom';
+                //         this.data.datasets.forEach(function (dataset, i) {
+                //             var meta = chartInstance.controller.getDatasetMeta(i);
+                //             meta.data.forEach(function (bar, index) {
+                //                 var data = dataset.data[index] + "%";
+                //                 ctx.fillText(data, bar._model.x, bar._model.y+40);
+                //             });
+                //         });
+                //     }
+                // },
                 // scaleLineColor: "white",
+                legend: {
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
                 scales: {
                     xAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: {
+                                display: false },
                             stacked: true
                         }],
                     yAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: {
+                                display: false },
                             stacked: true,
                             ticks: {
+                                //display:false,
                                 beginAtZero: true,
                                 max: 100,
                                 stepSize: 10
@@ -20292,18 +20557,14 @@ var InformaRevenuebyRegionComponent = (function () {
                     }],
             },
             options: {
-                showAllTooltips: true,
+                // showAllTooltips: true,
+                pieceLabel: {
+                    render: function (args) {
+                        return '£ ' + args.value;
+                    },
+                    position: 'outside',
+                },
                 elements: { arc: { borderWidth: 0 } },
-                tooltips: {
-                    xAlign: 'center',
-                    yAlign: 'center',
-                    callbacks: {
-                        // use label callback to return the desired label
-                        label: function (tooltipItem, data) {
-                            return "£ " + Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
-                        }
-                    }
-                }
             }
         });
     };
@@ -20388,19 +20649,29 @@ var InformaRevenuebyTypeComponent = (function () {
                     }]
             },
             options: {
-                showAllTooltips: true,
-                elements: { arc: { borderWidth: 0 } },
-                tooltips: {
-                    xAlign: 'center',
-                    yAlign: 'center',
-                    callbacks: {
-                        // use label callback to return the desired label
-                        label: function (tooltipItem, data) {
-                            return "£ " + Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
-                        },
-                        position: 'outside'
-                    }
+                labels: {
+                    position: 'outside'
                 },
+                //showAllTooltips: true,
+                elements: { arc: { borderWidth: 0 } },
+                pieceLabel: {
+                    render: function (args) {
+                        return '£ ' + args.value;
+                    },
+                    position: 'outside',
+                },
+                //,
+                // tooltips: {
+                //   xAlign: 'center',
+                //   yAlign: 'center',
+                //   callbacks: {
+                //     // use label callback to return the desired label
+                //     label: function (tooltipItem, data) {
+                //       return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+                //     },
+                //     position: 'outside'
+                //   }
+                // },
                 maintainAspectRatio: false
             }
         });
@@ -20536,7 +20807,7 @@ var InformaRevenuebyRegionDivLevelComponent = (function () {
                 },
                 scales: {
                     xAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { display: false },
                             ticks: {
                                 beginAtZero: true,
                                 max: 300
@@ -20547,7 +20818,7 @@ var InformaRevenuebyRegionDivLevelComponent = (function () {
                             }
                         }],
                     yAxes: [{
-                            gridLines: { color: "#786C69" },
+                            gridLines: { display: false },
                             scaleLabel: {
                                 display: true,
                             },
@@ -20673,22 +20944,42 @@ var InformaSharePriceComponent = (function () {
             },
             options: {
                 maintainAspectRatio: false,
-                showAllTooltips: true,
-                tooltips: {
-                    xAlign: 'left',
-                    yAlign: 'center',
-                    callbacks: {
-                        // use label callback to return the desired label
-                        label: function (tooltipItem, data) {
-                            return "£ " + tooltipItem.yLabel;
-                        },
-                        title: function (tooltipItem, data) {
-                            return;
-                        }
+                // showAllTooltips: true,
+                // textAline: 'center',
+                // textBAseLine: 'bottom',
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function () {
+                        var chartInstance = this.chart, ctx = chartInstance.ctx;
+                        ctx.fillStyle = 'rgb(0,0,0)';
+                        ctx.font = chart_js_1.Chart.helpers.fontString(chart_js_1.Chart.defaults.global.defaultFontSize, chart_js_1.Chart.defaults.global.defaultFontStyle, chart_js_1.Chart.defaults.global.defaultFontFamily);
+                        ctx.textAlign = 'bottom';
+                        ctx.textBaseline = 'bottom';
+                        this.data.datasets.forEach(function (dataset, i) {
+                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function (bar, index) {
+                                var data = "£" + dataset.data[index];
+                                ctx.fillText(data, bar._model.x - 5, bar._model.y - 5);
+                            });
+                        });
                     }
                 },
+                // tooltips: {
+                //     xAlign: 'right',
+                //     yAlign: 'center',
+                //     callbacks: {
+                //         // use label callback to return the desired label
+                //         label: function (tooltipItem, data) {
+                //             return "£ "+tooltipItem.yLabel;
+                //         },
+                //         title: function (tooltipItem, data) {
+                //             return;
+                //         }
+                //     }
+                // },
                 scales: {
                     xAxes: [{
+                            gridLines: { drawBorder: false, display: false },
                             stacked: false,
                             ticks: {
                                 beginAtZero: false,
@@ -20696,12 +20987,14 @@ var InformaSharePriceComponent = (function () {
                             }
                         }],
                     yAxes: [{
+                            gridLines: { drawBorder: false, display: false },
                             display: true,
                             stacked: false,
                             ticks: {
-                                beginAtZero: true,
-                                max: 800,
-                                stepSize: 200,
+                                display: false,
+                                beginAtZero: false,
+                                //max: 800,
+                                //stepSize: 50,
                                 fontColor: "#000",
                             }
                         }]
@@ -21038,10 +21331,10 @@ var ApiService = (function () {
     Object.defineProperty(ApiService, "API_DASHBOARD_DATA_ENDPOINT", {
         get: function () {
             switch ("local") {
-                case 'local': return 'http://localhost:8080/dashboardservice/api/v1/data/getData';
-                case 'dev': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
-                case 'uat': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
-                case 'prod': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'local': return 'https://kpidashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'dev': return 'https://kpidashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'uat': return 'https://kpidashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'prod': return 'https://kpidashboard-ui.herokuapp.com/api/v1/data/getData';
                 default: return '';
             }
         },

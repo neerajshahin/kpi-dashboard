@@ -57,18 +57,25 @@ export class InformaRevenuebyRegionComponent {
 
       },
       options: {
-        showAllTooltips: true,
+        // showAllTooltips: true,
+
+        pieceLabel: {
+            render: function (args) {
+                return '£ ' + args.value;
+            },
+            position: 'outside',
+         },
         elements: { arc: { borderWidth: 0 } },
-        tooltips: {
-          xAlign: 'center',
-          yAlign: 'center',
-          callbacks: {
-            // use label callback to return the desired label
-            label: function (tooltipItem, data) {
-              return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
-            }
-          }
-        }
+        // tooltips: {
+        //   xAlign: 'center',
+        //   yAlign: 'center',
+        //   callbacks: {
+        //     // use label callback to return the desired label
+        //     label: function (tooltipItem, data) {
+        //       return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+        //     }
+        //   }
+        // }
       }
     });
 

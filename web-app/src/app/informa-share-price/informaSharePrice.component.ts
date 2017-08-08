@@ -89,22 +89,44 @@ export class InformaSharePriceComponent {
             },
             options: {
                 maintainAspectRatio: false,
-                showAllTooltips: true,
-                tooltips: {
-                    xAlign: 'left',
-                    yAlign: 'center',
-                    callbacks: {
-                        // use label callback to return the desired label
-                        label: function (tooltipItem, data) {
-                            return "£ "+tooltipItem.yLabel;
-                        },
-                        title: function (tooltipItem, data) {
-                            return;
-                        }
+                // showAllTooltips: true,
+                // textAline: 'center',
+                // textBAseLine: 'bottom',
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function () {
+                        var chartInstance = this.chart,
+                            ctx = chartInstance.ctx;
+                        ctx.fillStyle = 'rgb(0,0,0)';
+                        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                        ctx.textAlign = 'bottom';
+                        ctx.textBaseline = 'bottom';
+
+                        this.data.datasets.forEach(function (dataset, i) {
+                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function (bar, index) {
+                                var data = "£" + dataset.data[index];
+                                ctx.fillText(data, bar._model.x - 5, bar._model.y - 5);
+                            });
+                        });
                     }
                 },
+                // tooltips: {
+                //     xAlign: 'right',
+                //     yAlign: 'center',
+                //     callbacks: {
+                //         // use label callback to return the desired label
+                //         label: function (tooltipItem, data) {
+                //             return "£ "+tooltipItem.yLabel;
+                //         },
+                //         title: function (tooltipItem, data) {
+                //             return;
+                //         }
+                //     }
+                // },
                 scales: {
                     xAxes: [{
+                        gridLines: { drawBorder :false,display: false },
                         stacked: false,
                         ticks: {
                             beginAtZero: false,
@@ -112,12 +134,14 @@ export class InformaSharePriceComponent {
                         }
                     }],
                     yAxes: [{
+                        gridLines: { drawBorder :false,display: false },
                         display: true,
                         stacked: false,
                         ticks: {
-                            beginAtZero: true,
-                            max: 800,
-                            stepSize: 200,
+                            display: false,
+                            beginAtZero: false,
+                            //max: 800,
+                            //stepSize: 50,
                             fontColor: "#000",
                         }
                     }]
