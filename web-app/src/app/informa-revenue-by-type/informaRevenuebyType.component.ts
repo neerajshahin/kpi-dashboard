@@ -56,19 +56,30 @@ export class InformaRevenuebyTypeComponent {
         }]
       },
       options: {
-        showAllTooltips: true,
-        elements: { arc: { borderWidth: 0 } },
-        tooltips: {
-          xAlign: 'center',
-          yAlign: 'center',
-          callbacks: {
-            // use label callback to return the desired label
-            label: function (tooltipItem, data) {
-              return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
-            },
+        labels:{
             position: 'outside'
-          }
         },
+        //showAllTooltips: true,
+        elements: { arc: { borderWidth: 0 } },
+  
+        pieceLabel: {
+            render: function (args) {
+                return '£ ' + args.value;
+            },
+            position: 'outside',
+         },
+        //,
+        // tooltips: {
+        //   xAlign: 'center',
+        //   yAlign: 'center',
+        //   callbacks: {
+        //     // use label callback to return the desired label
+        //     label: function (tooltipItem, data) {
+        //       return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+        //     },
+        //     position: 'outside'
+        //   }
+        // },
         maintainAspectRatio: false
       }
     });

@@ -109,7 +109,7 @@ export class InformaRevenuebyRegionDivLevelComponent {
         },
         scales: {
           xAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { display:false},
             ticks: {
               beginAtZero: true,
               max: 300
@@ -120,7 +120,7 @@ export class InformaRevenuebyRegionDivLevelComponent {
             }
           }],
           yAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { display:false },
             scaleLabel: {
               display: true,
             },

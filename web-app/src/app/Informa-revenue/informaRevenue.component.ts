@@ -89,14 +89,15 @@ export class InformaRevenueComponent {
         // scaleLineColor: "white",
         scales: {
           xAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { drawBorder :false,display:false },
             stacked: true
           }],
           yAxes: [{
-            gridLines: { color: "#786C69" },
+            gridLines: { drawBorder :false,display:false },
             stacked: true,
             ticks: {
-              beginAtZero: true,
+              display:false,
+              beginAtZero: false,
               max: 1400,
               stepSize: 200
             }
