@@ -11,7 +11,7 @@ export class ApiService {
   }
   public static get API_DASHBOARD_DATA_ENDPOINT(): string {
     switch (ENV) {
-      case 'local': return 'http://localhost:8080/dashboardservice/api/v1/data/getData';
+      case 'local': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
       case 'dev': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
       case 'uat': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
       case 'prod': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
