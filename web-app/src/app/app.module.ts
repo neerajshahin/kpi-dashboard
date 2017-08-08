@@ -7,6 +7,16 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'angular2-perfect-scrollbar';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { WindowRef } from './services/Window';
+import { InformaRevenueComponent } from './Informa-revenue/informaRevenue.component';
+import { InformaDividendPaidComponent } from './informa-dividend-paid/informaDividendPaid.component';
+import { InformaRevenuebyTypeComponent } from './informa-revenue-by-type/informaRevenuebyType.component';
+import { InformaRevenuebyRegionComponent } from './informa-revenue-by-region/informaRevenuebyRegion.component';
+import { InformaRevenuebyRegionDivLevelComponent } from './informa-revenue-division-level/informaRevenuebyRegionDivLevel.component';
+import { InformaPublicationJourneyComponent } from './informa-publication-journey/informaPublicationJourney.component';
+import { InformaSharePriceComponent } from './informa-share-price/informaSharePrice.component';
+
+
+
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -36,6 +46,13 @@ const APP_COMPONENTS = [
   NoContent,
   NumberFormat,
   ForwardPage,
+  InformaRevenueComponent,
+  InformaDividendPaidComponent,
+  InformaRevenuebyTypeComponent,
+  InformaRevenuebyRegionComponent,
+  InformaRevenuebyRegionDivLevelComponent,
+  InformaPublicationJourneyComponent,
+  InformaSharePriceComponent
 ].concat(COMPONENTS);
 
 // Application wide providers

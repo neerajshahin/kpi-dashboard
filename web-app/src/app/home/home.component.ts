@@ -1,9 +1,10 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Output } from '@angular/core';
 import { WindowRef } from '../services/Window';
 import { Chart } from 'chart.js';
 import { ApiDashboardServices } from '../services/dashboard.service'
-
+import { Observable } from 'rxjs/Rx';
 import { AppState } from '../app.service';
+import { JSON_DATA } from '../dummy/data';
 
 @Component({
   // The selector is what angular internally uses
@@ -18,38 +19,279 @@ import { AppState } from '../app.service';
   providers: [ApiDashboardServices]
 })
 export class Home {
-  @ViewChild('chart1') private chart1: ElementRef;
-  @ViewChild('chart2') private chart2: ElementRef;
-  @ViewChild('chart3') private chart3: ElementRef;
-  @ViewChild('chart4') private chart4: ElementRef;
-  @ViewChild('chart5') private chart5: ElementRef;
-  @ViewChild('chart6') private chart6: ElementRef;
-  @ViewChild('chart7') private chart7: ElementRef;
 
-  //@ViewChild('myChart1') myChart1: ElementRef;
+  @ViewChild('slide1') private carousel: ElementRef;
   // Set our default values
   localState = { value: '' };
   chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 3.4;
+  private revenue: any;
+  private dividend: any;
+  private revenueByType: any;
+  private revenueByRegion: any;
+  private revenuebyRegionDivLevel: any;
+  private publicationJourney: any;
+  private sharePrice: any;
+
+  private isCardClicked: boolean;
+  private clickedCard: any;
+  private clickedCanvasHeight: string;
+  private clickedCanvas: any;
+  private expandIcon: any;
+
   // TypeScript public modifiers
-  constructor(public appState: AppState, public apiDashboardServices: ApiDashboardServices, public winRef: WindowRef) {
+  constructor(public appState: AppState, public apiDashboardServices: ApiDashboardServices, public winRef: WindowRef, public eleRef: ElementRef) {
+    this.setChartPlugin();
 
   }
 
   ngOnInit() {
-    console.log('hello `Home` component');
-    console.log('Native window obj', this.winRef.nativeWindow.innerHeight);
-    let dashboardData;
-    this.apiDashboardServices.getDashboardData().subscribe(response => {
-      if (response.code == 200) {
-        dashboardData = response;
-        console.log("dashboard: " + dashboardData);
-      }
-    }, err => {
-      console.log("failure: " + err);
+    let data = JSON_DATA.DATA;
+    // console.log(this.carousel.nativeElement);
+    // this.carousel.nativeElement.carousel({
+    //   interval: 3000
+    // });
+    this.setDashBoardData(data);
+    // this.apiDashboardServices.getDashboardData().subscribe(response => {
+    //   if (response.status == 200) {
+    //     data = response.data.data;
+    //     console.log("dashboard: " + data);
+    //     this.setDashBoardData(data);
+    //   }
+    // }, err => {
+    //   console.log("failure: " + err);
+    // });
+
+    //Observable : calling service in every 10 sec to update latest data into dashboard
+    Observable.interval(8000).subscribe(x => {
+      this.setDashBoardData(data);
+      // this.apiDashboardServices.getDashboardData().subscribe(response => {
+      //   if (response.status == 200) {
+      //     data = response.data.DATA;
+      //     console.log("dashboard: " + data);
+      //     this.setDashBoardData(data);
+      //   }
+      // }, err => {
+      //   console.log("failure: " + err);
+      // });
     });
+
+  }
+
+  submitState(value: string) {
+    console.log('submitState', value);
+    this.appState.set('value', value);
+    this.localState.value = '';
+  }
+
+  //return chart
+  setDashBoardData(data) {
+    if (data) {
+      this.revenue = this.getInformaRevenue(data.InformaRevenue);
+      this.dividend = this.getInformaDividend(data.Dividend);
+      this.revenueByType = this.getInformaRevenueByType(data.RevenueByType);
+      this.revenueByRegion = this.getInformaRevenueByRegion(data.RevenueByRegion);
+      this.revenuebyRegionDivLevel = this.getInformaRevenuebyRegionDivLevel(data.RevenueByRegion);
+      this.publicationJourney = this.getInformaPublicationJourney(data.PublicationJourney);
+      this.sharePrice = this.getInformaSharePrice(data.SharePrice);
+    }
+  }
+
+  //return revenue by type data
+  getInformaRevenue(revenue: any) {
+    let division_keys = Object.keys(revenue.Divisioninfo);
+    let labels = [];
+    let datasets = [];
+    let revenueData = {};
+    for (let key of division_keys) {
+      labels.push(revenue.Divisioninfo[key]);
+    }
+    for (let revType of this.getKeys(revenue.Revenue)) {
+      let dataLabel = revType;
+      let data = [];
+      let dataset = [];
+      for (let key of division_keys) {
+        data.push(revenue.Revenue[revType][key]);
+      }
+      dataset['label'] = dataLabel;
+      dataset['data'] = data;
+      datasets.push(dataset);
+    }
+    revenueData['labels'] = labels;
+    revenueData['datasets'] = datasets;
+    // console.log("revenueData : " + JSON.stringify(revenueData));
+    return revenueData;
+  }
+
+  //return informa dividend data
+  getInformaDividend(dividend: any) {
+    let company_keys = Object.keys(dividend.Companynfo);
+    let labels = [];
+    let datasets = [];
+    let dividendData = {};
+    for (let key of company_keys) {
+      labels.push(dividend.Companynfo[key]);
+    }
+    for (let year of this.getKeys(dividend.Years)) {
+      let dataLabel = year;
+      let data = [];
+      let dataset = [];
+      for (let key of company_keys) {
+        data.push(dividend.Years[year][key]);
+      }
+      dataset['label'] = dataLabel;
+      dataset['data'] = data;
+      datasets.push(dataset);
+    }
+    dividendData['labels'] = labels;
+    dividendData['datasets'] = datasets;
+    // console.log("dividendData : " + JSON.stringify(dividendData));
+    return dividendData;
+  }
+
+
+  //return revenue by type data
+  getInformaRevenueByType(revenueByType: any) {
+    let labels = Object.keys(revenueByType.Revenuebytype);
+    let data = [];
+    let revenueByTypeData = {};
+    for (let label of labels) {
+      if ('Total' != label) {
+        let total = revenueByType.Revenuebytype.Total[label.replace(/\s/g, '')];
+        data.push(total);
+      }
+    }
+    revenueByTypeData['labels'] = labels;
+    revenueByTypeData['data'] = data;
+    // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
+    return revenueByTypeData;
+  }
+
+
+  //return revenue by region data
+  getInformaRevenueByRegion(revenueByRegion: any) {
+    let region_keys = Object.keys(revenueByRegion.RegionInfo);
+    let labels = [];
+    let data = [];
+    let revenueByRegionData = {}
+    for (let key of region_keys) {
+      labels.push(revenueByRegion.RegionInfo[key]);
+      data.push(revenueByRegion.Region.Total[key]);
+    }
+    revenueByRegionData['labels'] = labels;
+    revenueByRegionData['data'] = data;
+    // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
+    return revenueByRegionData;
+  }
+
+  //return revenue by region division level data
+  getInformaRevenuebyRegionDivLevel(revenue: any) {
+    let division_keys = Object.keys(revenue.Divisioninfo);
+    let labels = [];
+    let datasets = [];
+    let revenueData = {};
+    for (let key of division_keys) {
+      labels.push(revenue.Divisioninfo[key]);
+    }
+    for (let region of this.getKeys(revenue.Region)) {
+      if ('Total' != region) {
+        let dataLabel = region;
+        let data = [];
+        let dataset = [];
+        for (let key of division_keys) {
+          data.push(revenue.Region[region][key]);
+        }
+        dataset['label'] = dataLabel;
+        dataset['data'] = data;
+        datasets.push(dataset);
+      }
+    }
+    revenueData['labels'] = labels;
+    revenueData['datasets'] = datasets;
+    // console.log("revenueData : " + JSON.stringify(revenueData));
+    return revenueData;
+  }
+
+  //return publication journey data
+  getInformaPublicationJourney(publicationJourney: any) {
+    let division_keys = this.getKeys(publicationJourney.Journeyinfo);
+    let labels = [];
+    let datasets = [];
+    let revenueData = {};
+    for (let key of division_keys) {
+      labels.push(publicationJourney.Journeyinfo[key]);
+    }
+    for (let journry of this.getKeys(publicationJourney.Journey)) {
+      let dataLabel = journry;
+      let data = [];
+      let dataset = [];
+      for (let key of division_keys) {
+        data.push(publicationJourney.Journey[journry][key]);
+      }
+      dataset['label'] = dataLabel;
+      dataset['data'] = data;
+      datasets.push(dataset);
+    }
+    revenueData['labels'] = labels;
+    revenueData['datasets'] = datasets;
+    return revenueData;
+  }
+
+
+  //return informa share price data
+  getInformaSharePrice(sharePrice: any) {
+    let daysCount = parseInt(sharePrice.DaysCount);
+    let companiesCount = parseInt(sharePrice.DaysCount);
+    let days_key = Object.keys(sharePrice.Dates);
+    let companey_key = Object.keys(sharePrice.CompanyInfo);
+    let share_key = Object.keys(sharePrice.shareprice);
+    let labels = [];
+    let company = [];
+    let shareprice = [];
+    let shareData = {};
+    for (let i = 0; i < companiesCount; i++) {
+      let companyshareprice = [];
+      for (let j = 0; j < daysCount; j++) {
+        companyshareprice[j] = sharePrice.shareprice[share_key[j]][companey_key[i]];
+      }
+      shareprice[i] = companyshareprice;
+    }
+    let datasets = [];
+    for (let i = 0; i < daysCount; i++) {
+      labels[i] = sharePrice.Dates[days_key[i]];
+      let dataLabel = sharePrice.CompanyInfo[companey_key[i]];
+      let data = [];
+      data["label"] = dataLabel;
+      data["data"] = shareprice[i];
+      datasets[i] = data;
+    }
+    shareData['labels'] = labels.reverse();
+    shareData['datasets'] = datasets;
+    // console.log("revenueData : " + JSON.stringify(revenueData));
+    return shareData;
+  }
+
+  //return jsonObject keys array
+  getKeys(json: any) {
+    let arr_sources = Object.keys(json);
+    return arr_sources;
+  }
+
+
+  //set defult behavior for charts using chart plugin service
+  setChartPlugin() {
+
+    Chart.defaults.global.defaultFontSize = 14;
+    //Chart.defaults.global.legend.fontColor = '#000';
 
     Chart.pluginService.register({
       beforeRender: function (chart) {
+        chart.options.legend.labels.boxWidth = 10;
+        chart.options.legend.labels.padding = 5;
+        chart.options.legend.position = "bottom";
+        chart.options.legend.labels.fontSize = 14;
+        chart.options.legend.labels.fontColor = "black";
+        chart.options.maintainAspectRatio = false;
+
         if (chart.config.options.showAllTooltips) {
           // create an array of tooltips
           // we can't use the chart tooltip because there is only one tooltip per chart
@@ -65,7 +307,6 @@ export class Home {
               }, chart));
             });
           });
-
           // turn off normal tooltips
           chart.options.tooltips.enabled = false;
         }
@@ -78,9 +319,12 @@ export class Home {
               return;
             chart.allTooltipsOnce = true;
           }
-
           // turn on tooltips
           chart.options.tooltips.enabled = true;
+          chart.options.tooltips.displayColors = false;
+          chart.options.tooltips.backgroundColor = "transparent";
+          chart.options.tooltips.bodyFontColor = "black";
+
           Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
             tooltip.initialize();
             tooltip.update();
@@ -92,106 +336,26 @@ export class Home {
         }
       }
     });
-
-    // this.title.getData().subscribe(data => this.data = data);
-    let salesChart = this.chart1.nativeElement.getContext('2d');
-    //let setRevenueChart = this.myChart1.nativeElement.getContext('2d');
-    let data = {
-      labels: ["Q1", "Q2", "Q3", "Q4"],
-      datasets: [{
-        label: 'books',
-        data: [10, 19, 3, 5],
-        backgroundColor: [
-          'rgba(92, 184, 92, 1)',
-          'rgba(92, 184, 92, 1)',
-          'rgba(92, 184, 92, 1)',
-          'rgba(92, 184, 92, 1)'
-        ]
-      },
-      {
-        label: 'journals',
-        data: [15, 19, 3, 5],
-        backgroundColor: [
-          'rgba(91, 105, 188, 1)',
-          'rgba(91, 105, 188, 1)',
-          'rgba(91, 105, 188, 1)',
-          'rgba(91, 105, 188, 1)'
-        ]
-      }
-      ]
-    };
-
-    var myChart = new Chart(salesChart, {
-      type: 'bar',
-      data: data,
-      options: {
-        // showAllTooltips: true,
-        maintainAspectRatio: false,
-        legend: {
-          labels: {
-            fontColor: "white"
-            // fontSize: 10
-          }
-        },
-        scales: {
-          yAxes: [{
-            stacked: true,
-            ticks: {
-              beginAtZero: true,
-              max: 100,
-              stepSize: 10,
-              fontColor: "white"
-            }
-          }],
-          xAxes: [{
-            stacked: true,
-            ticks: {
-              beginAtZero: true,
-              fontColor: "white"
-            }
-          }]
-        }
-      }
-    });
-
-    var piedata = {
-      labels: ["T&F", "XYZ", "ABC"],
-      datasets: [{
-        backgroundColor: [
-          "#2ecc71",
-          "#3498db",
-          "#95a5a6"
-        ],
-        data: [25, 25, 50]
-      }]
-    };
-
-
-    var ctx = this.chart2.nativeElement.getContext('2d');
-    var myChart1 = new Chart(ctx, {
-      type: 'pie',
-      data: piedata,
-      options: {
-        showAllTooltips: true,
-        maintainAspectRatio: false,
-        legend: {
-          labels: {
-            fontColor: "white"
-            // fontSize: 10
-          }
-        },
-        animate: {
-          animateRotate: true,
-          duration: 1000,
-          animateScale: true,
-          animationSteps: 15
-        }
-      }
-    });
   }
-  submitState(value: string) {
-    console.log('submitState', value);
-    this.appState.set('value', value);
-    this.localState.value = '';
+
+  onExpandClick = function (event) {
+    if (!this.clicked) {
+      this.expandIcon = event.currentTarget;
+      this.expandIcon.classList.remove("fa-expand");
+      this.expandIcon.classList.add("fa-compress");
+      // getting card container-node
+      this.clickedCard = this.expandIcon.parentNode.parentNode.parentNode;
+      this.clickedCard.classList.add("fullscreen");
+      this.clickedCanvas = this.clickedCard.getElementsByTagName("canvas")[0];
+      this.clickedCanvasHeight = this.clickedCanvas.style.height;
+      this.clickedCanvas.style.height = "80vh";
+      this.clicked = true;
+    } else {
+      this.expandIcon.classList.remove("fa-compress");
+      this.expandIcon.classList.add("fa-expand");
+      this.clickedCard.classList.remove("fullscreen");
+      this.clickedCanvas.style.height = this.clickedCanvasHeight;
+      this.clicked = false;
+    }
   }
 }

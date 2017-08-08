@@ -2,48 +2,75 @@
 
   <div class="row col-lg-12 col-md-6">
 
-    <div class="col-lg-3 col-md-6">
-      <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Informa Revenue</h6>
-        <div class="widget-chart-1">
-          <div class="widget-chart-box-1">
-            <canvas #chart1 [style.height.px]="chartHeight"></canvas>
+    <div class="card-container col-lg-4 col-md-6 carousel">
+      <div class="slides card-panel">
+        <div class="card-box">
+          <div class="header">
+            <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+            <h6 class="header-title m-t-0 m-b-30">Informa Revenue</h6>
+          </div>
+          <div class="widget-chart-1">
+            <div class="widget-chart-box-1">
+              <informaRevenue class="card-wrapper" [data]="revenue"></informaRevenue>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="header">
+            <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+            <h6 class="header-title m-t-0 m-b-30">Dividend Paid Comparison</h6>
+          </div>
+          <div class="widget-chart-1">
+            <div class="widget-chart-box-1">
+              <informaDividendPaid class="card-wrapper" [data]="dividend"></informaDividendPaid>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- end col -->
+    <!-- end col -->
 
-    <div class="col-lg-3 col-md-6">
+    <div class="card-container col-lg-4 col-md-6">
+      <div class="card-panel">
       <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Type</h6>
+        <div class="header">
+          <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+          <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Type (2016)</h6>
+        </div>
         <div class="widget-chart-1">
           <div class="widget-chart-box-1">
-            <canvas #chart2 [style.height.px]="chartHeight"></canvas>
+            <informaRevenuebyType class="card-wrapper" [data]="revenueByType"></informaRevenuebyType>
           </div>
         </div>
       </div>
+      </div>
+
     </div>
     <!-- end col -->
 
-    <div class="col-lg-3 col-md-6">
-      <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Region</h6>
-        <div class="widget-chart-1">
-          <div class="widget-chart-box-1">
-            <canvas #chart3 [style.height.px]="chartHeight"></canvas>
+    <div class="card-container col-lg-4 col-md-6 carousel">
+      <div class="slides card-panel">
+        <div class="card-box">
+          <div class="header">
+            <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+            <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Region (2016)</h6>
+          </div>
+          <div class="widget-chart-1">
+            <div class="widget-chart-box-1">
+              <informaRevenuebyRegion class="card-wrapper"[data]="revenueByRegion"></informaRevenuebyRegion>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- end col -->
-
-    <div class="col-lg-3 col-md-6">
-      <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Revenue by Region Division Level</h6>
-        <div class="widget-chart-1">
-          <div class="widget-chart-box-1">
-            <canvas #chart4 [style.height.px]="chartHeight"></canvas>
+        <div class="card-box">
+          <div class="header">
+            <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+            <h6 class="header-title m-t-0 m-b-30">Informa Revenue by Group (2016)</h6>
+          </div>
+          <div class="widget-chart-1">
+            <div class="widget-chart-box-1">
+              <informaRevenuebyRegionDivLevel class="card-wrapper" [data]="revenuebyRegionDivLevel "></informaRevenuebyRegionDivLevel>
+            </div>
           </div>
         </div>
       </div>
@@ -54,36 +81,31 @@
 
   <div class="row col-lg-12 col-md-6">
 
-    <div class="col-lg-3 col-md-6">
+    <div class="card-container col-lg-6 col-md-6">
       <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Informa Dividend Pain</h6>
+        <div class="header">
+          <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+          <h6 class="header-title m-t-0 m-b-30">Publication Journey</h6>
+        </div>
         <div class="widget-chart-1">
           <div class="widget-chart-box-1">
-            <canvas #chart5 [style.height.px]="chartHeight"></canvas>
+            <informaPublicationJourney class="card-wrapper" [data]="publicationJourney"></informaPublicationJourney>
           </div>
         </div>
       </div>
     </div>
     <!-- end col -->
-
-    <div class="col-lg-3 col-md-6">
-      <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">Journal Production time</h6>
-        <div class="widget-chart-1">
-          <div class="widget-chart-box-1">
-            <canvas #chart6 [style.height.px]="chartHeight"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- end col -->
 
-    <div class="col-lg-6 col-md-6">
+    <div class="card-container col-lg-6 col-md-12">
       <div class="card-box">
-        <h6 class="header-title m-t-0 m-b-30">abcdefghijklmnopqrstuvwxyz</h6>
+        <div class="header">
+          <i class="fa fa-expand my-icon" aria-hidden="true" (click)="onExpandClick($event)"></i>
+          <h6 class="header-title m-t-0 m-b-30">Informa Share Price</h6>
+        </div>
         <div class="widget-chart-1">
           <div class="widget-chart-box-1">
-            <canvas #chart7 [style.height.px]="chartHeight"></canvas>
+            <informaSharePrice class="card-wrapper" [data]="sharePrice"></informaSharePrice>
           </div>
         </div>
       </div>

@@ -1,13 +1,143 @@
 /*styles for home content only*/
-.card-box {
-    padding: 20px;
-    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    background-clip: padding-box;
-    margin-bottom: 20px;
-    background-color: #2f3e47;
-    color: white;
+.card-container {
+    /* padding: 15px; */
+    /* box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02); */
+    /* background-clip: padding-box;
+    margin-bottom: 20px; */
+    background-color: transparent;
+    padding: 0;
 }
+
+h6.header-title{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 33px;
+}
+
+.card-box{
+    padding: 0;
+    background-color: #fff;
+}
+.card-box >  div.header{
+    /* box-shadow: 10px 10px 5px #24282b; */
+    background-color: #688fca;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    text-align: center;
+    height: 30px;
+    
+    /* display: table-cell; */
+}
+
+.card-container {
+    padding: 0 5px 0 5px;
+}
+.card-container.fullscreen{
+    z-index: 9999;
+    width: 96%;
+    height: 82%;
+    position: fixed;
+    top: 6%;
+    left: 2%;
+    transition:all .3s ease;
+ }
+
+.my-icon{
+    float: right;
+    display: none;
+    /* color: #2d5e88; */
+    color: #54d0c3;
+    font-size: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.carousel{
+    overflow:hidden;
+    /* width:100%; */
+}
+.slides{
+    list-style:none;
+    /* position:relative; */
+    width:200% !important;
+    transition: 1s ease;
+    /* width:500%;  Number of panes * 100%  */
+    overflow:hidden;
+        /* Slide effect Animations*/
+    /* -moz-animation:carousel 30s infinite;
+    -webkit-animation:carousel 30s infinite; */
+    animation: carousel 20s linear infinite;
+
+}
+.card-panel{
+    position:relative;
+    top:-10px;
+}
+.slides > div{
+    /* position:relative; */
+    width: 50%;
+    float:left;
+    left: -5px;
+    position: relative;
+    /* 100 / number of panes */
+}
+.carousel img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+.carousel h2{
+    margin-bottom: 0;
+    font-size:1em;
+    padding:1.5em 0.5em 1.5em 0.5em;
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+    color:#fff;
+    background-color:rgba(0,0,0,0.75);
+    text-transform: uppercase;
+}
+
+@keyframes carousel{
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(0%);
+    }
+    30% {
+        transform: translateX(0%);
+    }
+    40% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    60% {
+        transform: translateX(-50%);
+    }
+    70% {
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(-50%);
+    }
+    90% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+    
+
+   
 

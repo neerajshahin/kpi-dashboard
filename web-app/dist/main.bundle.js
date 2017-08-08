@@ -1998,7 +1998,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".container{\n    padding-left: 52px;\n    padding-right: 53px;\n}\n.navbar-site {\n    /* background-color: #006DB4; */\n    background-color: #253138;\n    border: 0px;\n    margin-bottom: 0px;\n    z-index: 1;\n}\n.navbar-brand{\n    margin-right: 49px;\n    width: 186px;\n    margin-left: 0px;\n    color: #ddd;\n}", ""]);
+exports.push([module.i, ".container{\n    padding-left: 52px;\n    padding-right: 53px;\n}\n.navbar-site {\n    /* background-color: #006DB4; */\n    /* background-color: #10147E; */\n    background-color: rgb(76, 117, 179);\n    border: 0px;\n    margin-bottom: 0px;\n    z-index: 1;\n    box-shadow: 5px 5px 5px #24282b;\n   \n}\n\n.navbar-brand{\n    margin-right: 49px;\n    /* width: 186px; */\n    font-size: 28px;\n    margin-left: 0px;\n    font-weight: BOLD;\n    color: #ddd;\n    /* box-shadow: 10px 10px 5px #24282b; */\n}", ""]);
 
 // exports
 
@@ -2013,9 +2013,66 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "/*styles for home content only*/\n.card-box {\n    padding: 20px;\n    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);\n    -webkit-border-radius: 5px;\n    border-radius: 5px;\n    -moz-border-radius: 5px;\n    background-clip: padding-box;\n    margin-bottom: 20px;\n    background-color: #2f3e47;\n    color: white;\n}\n\n", ""]);
+exports.push([module.i, "/*styles for home content only*/\n.card-container {\n    /* padding: 15px; */\n    /* box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02); */\n    /* background-clip: padding-box;\n    margin-bottom: 20px; */\n    background-color: transparent;\n    padding: 0;\n}\n\nh6.header-title{\n    color: #fff;\n    font-size: 16px;\n    text-align: center;\n    vertical-align: middle;\n    line-height: 33px;\n}\n\n.card-box{\n    padding: 0;\n    background-color: #fff;\n}\n.card-box >  div.header{\n    /* box-shadow: 10px 10px 5px #24282b; */\n    background-color: #688fca;\n    margin-bottom: 15px;\n    vertical-align: middle;\n    text-align: center;\n    height: 30px;\n    \n    /* display: table-cell; */\n}\n\n.card-container {\n    padding: 0 5px 0 5px;\n}\n.card-container.fullscreen{\n    z-index: 9999;\n    width: 96%;\n    height: 82%;\n    position: fixed;\n    top: 6%;\n    left: 2%;\n    transition:all .3s ease;\n }\n\n.my-icon{\n    float: right;\n    display: none;\n    /* color: #2d5e88; */\n    color: #54d0c3;\n    font-size: 16px;\n    margin-top: -10px;\n    cursor: pointer;\n}\n\n.carousel{\n    overflow:hidden;\n    /* width:100%; */\n}\n.slides{\n    list-style:none;\n    /* position:relative; */\n    width:200% !important;\n    transition: 1s ease;\n    /* width:500%;  Number of panes * 100%  */\n    overflow:hidden;\n        /* Slide effect Animations*/\n    /* -moz-animation:carousel 30s infinite;\n    -webkit-animation:carousel 30s infinite; */\n    animation: carousel 20s linear infinite;\n\n}\n.card-panel{\n    position:relative;\n    top:-10px;\n}\n.slides > div{\n    /* position:relative; */\n    width: 50%;\n    float:left;\n    left: -5px;\n    position: relative;\n    /* 100 / number of panes */\n}\n.carousel img{\n    display:block;\n    width:100%;\n    max-width:100%;\n}\n.carousel h2{\n    margin-bottom: 0;\n    font-size:1em;\n    padding:1.5em 0.5em 1.5em 0.5em;\n    position:absolute;\n    right:0px;\n    bottom:0px;\n    left:0px;\n    text-align:center;\n    color:#fff;\n    background-color:rgba(0,0,0,0.75);\n    text-transform: uppercase;\n}\n\n@keyframes carousel{\n    0% {\n        transform: translateX(0%);\n    }\n    10% {\n        transform: translateX(0%);\n    }\n    20% {\n        transform: translateX(0%);\n    }\n    30% {\n        transform: translateX(0%);\n    }\n    40% {\n        transform: translateX(0%);\n    }\n    50% {\n        transform: translateX(-50%);\n    }\n    60% {\n        transform: translateX(-50%);\n    }\n    70% {\n        transform: translateX(-50%);\n    }\n    80% {\n        transform: translateX(-50%);\n    }\n    90% {\n        transform: translateX(-50%);\n    }\n    100% {\n        transform: translateX(0%);\n    }\n}\n    \n\n   \n\n", ""]);
 
 // exports
+
+
+/***/ },
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/***/ function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function() {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		var result = [];
+		for(var i = 0; i < this.length; i++) {
+			var item = this[i];
+			if(item[2]) {
+				result.push("@media " + item[2] + "{" + item[1] + "}");
+			} else {
+				result.push(item[1]);
+			}
+		}
+		return result.join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
 
 
 /***/ },
@@ -18776,6 +18833,135 @@ exports.not = not;
 
 /***/ },
 
+/***/ "./src/app/Informa-revenue/informaRevenue.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/Informa-revenue/informaRevenue.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaRevenueComponent = (function () {
+    function InformaRevenueComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaRevenueComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            for (var i = 0, l = this.chart.data.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = [];
+                this.chart.data.datasets[i].data = [];
+            }
+            this.chart.update();
+            this.chart.data.labels = changes.data.currentValue.labels;
+            for (var i = 0, l = changes.data.currentValue.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = changes.data.currentValue.datasets[i].label;
+                this.chart.data.datasets[i].data = changes.data.currentValue.datasets[i].data;
+            }
+            this.chart.update(3000);
+        }
+    };
+    InformaRevenueComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr1
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr5
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr4
+                    },
+                    {
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr2
+                    },
+                ],
+            },
+            options: {
+                showAllTooltips: true,
+                tooltips: {
+                    xAlign: 'center',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return tooltipItem.yLabel;
+                        },
+                        title: function (tooltipItem, data) {
+                            return;
+                        }
+                    }
+                },
+                // scaleLineColor: "white",
+                scales: {
+                    xAxes: [{
+                            gridLines: { color: "#786C69" },
+                            stacked: true
+                        }],
+                    yAxes: [{
+                            gridLines: { color: "#786C69" },
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                                max: 1400,
+                                stepSize: 200
+                            }
+                        }]
+                }
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaRevenueComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaRevenueComponent.prototype, "data", void 0);
+    InformaRevenueComponent = __decorate([
+        core_1.Component({
+            selector: 'informaRevenue',
+            template: __webpack_require__("./src/app/Informa-revenue/informaRevenue.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaRevenueComponent);
+    return InformaRevenueComponent;
+    var _a, _b;
+}());
+exports.InformaRevenueComponent = InformaRevenueComponent;
+
+
+/***/ },
+
 /***/ "./src/app/app.component.css":
 /***/ function(module, exports, __webpack_require__) {
 
@@ -18794,7 +18980,7 @@ exports.not = not;
 /***/ "./src/app/app.component.html":
 /***/ function(module, exports) {
 
-module.exports = "\n<header-component></header-component>\n<main class=\"main main-container main-container-padding container-fluid\">\n  <div class=\"col-lg-2 col-md-2 hidden-sm hidden-xs\"></div>\n  <router-outlet></router-outlet>\n</main>\n\n<!-- <footer></footer> -->"
+module.exports = "\n<header-component></header-component>\n<main class=\"main main-container main-container-padding container-fluid\">\n  <!-- <div class=\"col-lg-2 col-md-2 hidden-sm hidden-xs\"></div> -->\n  <router-outlet></router-outlet>\n</main>\n\n<!-- <footer></footer> -->"
 
 /***/ },
 
@@ -18871,6 +19057,13 @@ var hmr_1 = __webpack_require__("./node_modules/@angularclass/hmr/dist/index.js"
 var angular2_perfect_scrollbar_1 = __webpack_require__("./node_modules/angular2-perfect-scrollbar/lib/index.js");
 var ng2_charts_1 = __webpack_require__("./node_modules/ng2-charts/ng2-charts.js");
 var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var informaRevenue_component_1 = __webpack_require__("./src/app/Informa-revenue/informaRevenue.component.ts");
+var informaDividendPaid_component_1 = __webpack_require__("./src/app/informa-dividend-paid/informaDividendPaid.component.ts");
+var informaRevenuebyType_component_1 = __webpack_require__("./src/app/informa-revenue-by-type/informaRevenuebyType.component.ts");
+var informaRevenuebyRegion_component_1 = __webpack_require__("./src/app/informa-revenue-by-region/informaRevenuebyRegion.component.ts");
+var informaRevenuebyRegionDivLevel_component_1 = __webpack_require__("./src/app/informa-revenue-division-level/informaRevenuebyRegionDivLevel.component.ts");
+var informaPublicationJourney_component_1 = __webpack_require__("./src/app/informa-publication-journey/informaPublicationJourney.component.ts");
+var informaSharePrice_component_1 = __webpack_require__("./src/app/informa-share-price/informaSharePrice.component.ts");
 var PERFECT_SCROLLBAR_CONFIG = {
     suppressScrollX: true
 };
@@ -18898,6 +19091,13 @@ var APP_COMPONENTS = [
     no_content_1.NoContent,
     app_pipes_1.NumberFormat,
     no_reuse_page_base_1.ForwardPage,
+    informaRevenue_component_1.InformaRevenueComponent,
+    informaDividendPaid_component_1.InformaDividendPaidComponent,
+    informaRevenuebyType_component_1.InformaRevenuebyTypeComponent,
+    informaRevenuebyRegion_component_1.InformaRevenuebyRegionComponent,
+    informaRevenuebyRegionDivLevel_component_1.InformaRevenuebyRegionDivLevelComponent,
+    informaPublicationJourney_component_1.InformaPublicationJourneyComponent,
+    informaSharePrice_component_1.InformaSharePriceComponent
 ].concat(components_1.COMPONENTS);
 // Application wide providers
 var APP_PROVIDERS = app_resolver_1.APP_RESOLVER_PROVIDERS.concat([
@@ -19206,7 +19406,7 @@ __export(__webpack_require__("./src/app/components/ui/footer/footer.component.ts
 /***/ "./src/app/components/ui/header/header.component.html":
 /***/ function(module, exports) {
 
-module.exports = "<header>\n  <div class=\"navbar navbar-site bg-faded\">\n    <!-- <div class=\"container-fluid\"> -->\n      <div class=\"navbar-brand mb-0\">KPI Dashboard</div>\n      <!-- <div id='logo-image' class=\"navbar-header\">\n        <a [routerLink]=\" ['./'] \"> <img class=\"header-logo\" src=\"assets/img/t-f-new@2x.png\" alt=\"logo for taylor and francis\"></a>\n      </div> -->\n    <!-- </div> -->\n  </div>\n</header>"
+module.exports = "<header>\n  <div class=\"navbar navbar-site bg-faded\">\n    <!-- <div class=\"container-fluid\"> -->\n      <div class=\"navbar-brand mb-0\">Informa Health DashBoard</div>\n      <!-- <div id='logo-image' class=\"navbar-header\">\n        <a [routerLink]=\" ['./'] \"> <img class=\"header-logo\" src=\"assets/img/t-f-new@2x.png\" alt=\"logo for taylor and francis\"></a>\n      </div> -->\n    <!-- </div> -->\n  </div>\n</header>"
 
 /***/ },
 
@@ -19283,6 +19483,497 @@ var UIComponentsModule;
 })(UIComponentsModule = exports.UIComponentsModule || (exports.UIComponentsModule = {}));
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = UIComponentsModule;
+
+
+/***/ },
+
+/***/ "./src/app/dummy/data.ts":
+/***/ function(module, exports) {
+
+"use strict";
+"use strict";
+exports.JSON_DATA = {
+    "DATA": {
+        "RevenueByType": {
+            "title": "RevenueByType",
+            "id": "revenue",
+            "Divisioninfo": {
+                "C1": "Academic Publishing",
+                "C2": "Business Intelligence",
+                "C3": "Global Exhibitions",
+                "C4": "Knowledge & Networking"
+            },
+            "Revenuebytype": {
+                "Subscriptions": {
+                    "C1": "245.2",
+                    "C2": "258.1",
+                    "C3": "",
+                    "C4": ""
+                },
+                "Unit Sales": {
+                    "C1": "242.2",
+                    "C2": "23.2",
+                    "C3": "",
+                    "C4": ""
+                },
+                "Advertising": {
+                    "C1": "242.2",
+                    "C2": "23.2",
+                    "C3": "",
+                    "C4": ""
+                },
+                "Exhibitor": {
+                    "C1": "",
+                    "C2": "",
+                    "C3": "6.138",
+                    "C4": "6.732"
+                },
+                "Attendee": {
+                    "C1": "",
+                    "C2": "",
+                    "C3": "36.828",
+                    "C4": "114.444"
+                },
+                "Sponsorship": {
+                    "C1": "",
+                    "C2": "",
+                    "C3": "27.621",
+                    "C4": "62.832"
+                },
+                "Total": {
+                    "Subscriptions": "503.30",
+                    "UnitSales": "268.40",
+                    "Advertising": "21.57",
+                    "Exhibitor": "276.71",
+                    "Attendee": "151.27",
+                    "Sponsorship": "90.45"
+                }
+            }
+        },
+        "Dividend": {
+            "title": "Dividend",
+            "id": "dividend",
+            "Companynfo": {
+                "C1": "Informa PLC",
+                "C2": "UBM",
+                "C3": "Pearson",
+                "C4": "Daily Mail & General Trust",
+                "C5": "ITE",
+                "C6": "Tarsus Group",
+                "C7": "Reed Elsevier"
+            },
+            "Years": {
+                "Yr2012": {
+                    "C1": "12.5",
+                    "C2": "26.7",
+                    "C3": "21.1",
+                    "C4": "11.7",
+                    "C5": "4.2",
+                    "C6": "6.8",
+                    "C7": "17"
+                },
+                "Yr2013": {
+                    "C1": "12.5",
+                    "C2": "27.2",
+                    "C3": "22.6",
+                    "C4": "12.4",
+                    "C5": "4.4",
+                    "C6": "7.3",
+                    "C7": "17.95"
+                },
+                "Yr2014": {
+                    "C1": "12.9",
+                    "C2": "22.8",
+                    "C3": "24.2",
+                    "C4": "13.3",
+                    "C5": "4.7",
+                    "C6": "7.8",
+                    "C7": "19"
+                },
+                "Yr2015": {
+                    "C1": "13.55",
+                    "C2": "21.6",
+                    "C3": "25.7",
+                    "C4": "14.2",
+                    "C5": "4.9",
+                    "C6": "8.4",
+                    "C7": "22.3"
+                },
+                "Yr2016": {
+                    "C1": "13.04",
+                    "C2": "22",
+                    "C3": "25.7",
+                    "C4": "14.9",
+                    "C5": "4.9",
+                    "C6": "9.1",
+                    "C7": "25.7"
+                }
+            }
+        },
+        "RevenueByRegion": {
+            "title": "RevenueByRegion",
+            "id": "revenue",
+            "Divisioninfo": {
+                "C1": "Academic Publishing",
+                "C2": "Business Intelligence",
+                "C3": "Global Exhibitions",
+                "C4": "Knowledge & Networking"
+            },
+            "RegionInfo": {
+                "R1": "UK",
+                "R2": "North America",
+                "R3": "Continental Europe",
+                "R4": "Rest of World"
+            },
+            "Region": {
+                "UK": {
+                    "C1": "63.752",
+                    "C2": "37.7",
+                    "C3": "3.069",
+                    "C4": "42.636"
+                },
+                "NA": {
+                    "C1": "250.104",
+                    "C2": "156.6",
+                    "C3": "122.76",
+                    "C4": "62.832"
+                },
+                "CE": {
+                    "C1": "58.848",
+                    "C2": "46.4",
+                    "C3": "33.739",
+                    "C4": "71.808"
+                },
+                "ROW": {
+                    "C1": "117.696",
+                    "C2": "49.3",
+                    "C3": "147.312",
+                    "C4": "47.124"
+                },
+                "Total": {
+                    "R1": "147.16",
+                    "R2": "592.30",
+                    "R3": "210.82",
+                    "R4": "361.43"
+                }
+            }
+        },
+        "InformaRevenue": {
+            "title": "InformaRevenue",
+            "id": "InformaRevenue",
+            "Divisioninfo": {
+                "C1": "2014",
+                "C2": "2015",
+                "C3": "2016"
+            },
+            "Revenue": {
+                "AcadamicPublishing": {
+                    "C1": "408.9",
+                    "C2": "447.4",
+                    "C3": "490.4"
+                },
+                "BusinessIntelligenence": {
+                    "C1": "281.7",
+                    "C2": "276.8",
+                    "C3": "290"
+                },
+                "GlobalExhibitions": {
+                    "C1": "200.2",
+                    "C2": "262.5",
+                    "C3": "306.9"
+                },
+                "KnowledgeNetworking": {
+                    "C1": "246.2",
+                    "C2": "225.5",
+                    "C3": "224.4"
+                }
+            }
+        },
+        "PublicationJourney": {
+            "title": "PublicationJourney",
+            "id": "Journey",
+            "Journeyinfo": {
+                "C1": "Feb",
+                "C2": "Mar",
+                "C3": "April",
+                "C4": "May",
+                "C5": "June"
+            },
+            "Journey": {
+                "wks0to3": {
+                    "C1": "28",
+                    "C2": "31",
+                    "C3": "31",
+                    "C4": "34",
+                    "C5": "39"
+                },
+                "wks3to5": {
+                    "C1": "24",
+                    "C2": "24",
+                    "C3": "25",
+                    "C4": "21",
+                    "C5": "20"
+                },
+                "wks5": {
+                    "C1": "48",
+                    "C2": "45",
+                    "C3": "44",
+                    "C4": "45",
+                    "C5": "41"
+                }
+            }
+        },
+        "SharePrice": {
+            "title": "SharePrice",
+            "id": "SharePrice",
+            "DaysCount": "7",
+            "Companycount": "7",
+            "Dates": {
+                "D1": "4-Aug",
+                "D2": "3-Aug",
+                "D3": "2-Aug",
+                "D4": "1-Aug",
+                "D5": "31-Jul",
+                "D6": "28-Jul",
+                "D7": "27-Jul",
+                "D8": "26-Jul",
+                "D9": "25-Jul",
+                "D10": "24-Jul",
+                "D11": "21-Jul",
+                "D12": "20-Jul",
+                "D13": "19-Jul",
+                "D14": "18-Jul",
+                "D15": "17-Jul",
+                "D16": "14-Jul",
+                "D17": "13-Jul",
+                "D18": "12-Jul",
+                "D19": "11-Jul",
+                "D20": "10-Jul",
+                "D21": "7-Jul",
+                "D22": "6-Jul",
+                "D23": "5-Jul"
+            },
+            "CompanyInfo": {
+                "C1": "Informa PLC",
+                "C2": "UBM",
+                "C3": "Reed Elsevier",
+                "C4": "Pearson",
+                "C5": "Daily Mail and General Trust",
+                "C6": "ITE",
+                "C7": "Tarsus Group"
+            },
+            "shareprice": {
+                "D1": {
+                    "C1": "710.50",
+                    "C2": "716.00",
+                    "C3": "17.98",
+                    "C4": "655.50",
+                    "C5": "652.00",
+                    "C6": "171.00",
+                    "C7": "311.50"
+                },
+                "D2": {
+                    "C1": "707.50",
+                    "C2": "714.00",
+                    "C3": "17.76",
+                    "C4": "669.00",
+                    "C5": "648.50",
+                    "C6": "168.50",
+                    "C7": "306.50"
+                },
+                "D3": {
+                    "C1": "702.00",
+                    "C2": "711.00",
+                    "C3": "17.79",
+                    "C4": "658.50",
+                    "C5": "645.50",
+                    "C6": "173.00",
+                    "C7": "302.75"
+                },
+                "D4": {
+                    "C1": "701.50",
+                    "C2": "716.50",
+                    "C3": "17.91",
+                    "C4": "660.00",
+                    "C5": "644.50",
+                    "C6": "175.50",
+                    "C7": "301.88"
+                },
+                "D5": {
+                    "C1": "695.50",
+                    "C2": "725.00",
+                    "C3": "17.78",
+                    "C4": "657.50",
+                    "C5": "636.50",
+                    "C6": "180.25",
+                    "C7": "300.50"
+                },
+                "D6": {
+                    "C1": "697.00",
+                    "C2": "705.50",
+                    "C3": "17.75",
+                    "C4": "667.00",
+                    "C5": "637.50",
+                    "C6": "178.25",
+                    "C7": "297.50"
+                },
+                "D7": {
+                    "C1": "702.00",
+                    "C2": "717.50",
+                    "C3": "18.00",
+                    "C4": "656.50",
+                    "C5": "636.00",
+                    "C6": "165.00",
+                    "C7": "296.25"
+                },
+                "D8": {
+                    "C1": "700.50",
+                    "C2": "715.00",
+                    "C3": "17.69",
+                    "C4": "643.00",
+                    "C5": "646.00",
+                    "C6": "160.00",
+                    "C7": "298.00"
+                },
+                "D9": {
+                    "C1": "694.00",
+                    "C2": "707.50",
+                    "C3": "17.61",
+                    "C4": "638.50",
+                    "C5": "638.00",
+                    "C6": "163.25",
+                    "C7": "299.13"
+                },
+                "D10": {
+                    "C1": "675.50",
+                    "C2": "696.00",
+                    "C3": "17.56",
+                    "C4": "639.00",
+                    "C5": "634.00",
+                    "C6": "164.25",
+                    "C7": "302.50"
+                },
+                "D11": {
+                    "C1": "675.00",
+                    "C2": "691.50",
+                    "C3": "17.62",
+                    "C4": "643.50",
+                    "C5": "634.50",
+                    "C6": "165.75",
+                    "C7": "297.00"
+                },
+                "D12": {
+                    "C1": "677.50",
+                    "C2": "696.00",
+                    "C3": "17.81",
+                    "C4": "642.00",
+                    "C5": "643.00",
+                    "C6": "165.00",
+                    "C7": "295.50"
+                },
+                "D13": {
+                    "C1": "675.50",
+                    "C2": "688.50",
+                    "C3": "17.80",
+                    "C4": "640.50",
+                    "C5": "642.50",
+                    "C6": "159.00",
+                    "C7": "299.13"
+                },
+                "D14": {
+                    "C1": "669.00",
+                    "C2": "687.50",
+                    "C3": "17.61",
+                    "C4": "630.00",
+                    "C5": "637.50",
+                    "C6": "162.00",
+                    "C7": "293.00"
+                },
+                "D15": {
+                    "C1": "667.00",
+                    "C2": "684.50",
+                    "C3": "17.71",
+                    "C4": "631.50",
+                    "C5": "638.00",
+                    "C6": "163.00",
+                    "C7": "289.50"
+                },
+                "D16": {
+                    "C1": "663.50",
+                    "C2": "684.00",
+                    "C3": "17.82",
+                    "C4": "635.50",
+                    "C5": "639.50",
+                    "C6": "165.00",
+                    "C7": "293.50"
+                },
+                "D17": {
+                    "C1": "664.50",
+                    "C2": "677.50",
+                    "C3": "17.76",
+                    "C4": "629.00",
+                    "C5": "635.50",
+                    "C6": "164.00",
+                    "C7": "293.75"
+                },
+                "D18": {
+                    "C1": "663.50",
+                    "C2": "680.00",
+                    "C3": "17.71",
+                    "C4": "624.00",
+                    "C5": "636.50",
+                    "C6": "152.00",
+                    "C7": "292.00"
+                },
+                "D19": {
+                    "C1": "661.00",
+                    "C2": "673.50",
+                    "C3": "17.53",
+                    "C4": "655.00",
+                    "C5": "636.50",
+                    "C6": "154.75",
+                    "C7": "288.13"
+                },
+                "D20": {
+                    "C1": "660.00",
+                    "C2": "675.50",
+                    "C3": "17.67",
+                    "C4": "690.50",
+                    "C5": "639.50",
+                    "C6": "154.75",
+                    "C7": "289.50"
+                },
+                "D21": {
+                    "C1": "658.00",
+                    "C2": "678.50",
+                    "C3": "17.60",
+                    "C4": "685.50",
+                    "C5": "648.00",
+                    "C6": "154.75",
+                    "C7": "285.50"
+                },
+                "D22": {
+                    "C1": "667.00",
+                    "C2": "678.50",
+                    "C3": "17.80",
+                    "C4": "691.00",
+                    "C5": "650.00",
+                    "C6": "155.00",
+                    "C7": "285.50"
+                },
+                "D23": {
+                    "C1": "666.00",
+                    "C2": "689.50",
+                    "C3": "18.05",
+                    "C4": "691.50",
+                    "C5": "657.00",
+                    "C6": "153.50",
+                    "C7": "281.50"
+                }
+            }
+        }
+    }
+};
 
 
 /***/ },
@@ -19386,7 +20077,7 @@ exports.ActivateOnAccessToken = ActivateOnAccessToken;
 /***/ "./src/app/home/home.component.html":
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart1 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Type</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart2 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Region</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart3 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Revenue by Region Division Level</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart4 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n  </div>\n  <!-- end row -->\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Informa Dividend Pain</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart5 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n\n    <div class=\"col-lg-3 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">Journal Production time</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart6 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n\n    <div class=\"col-lg-6 col-md-6\">\n      <div class=\"card-box\">\n        <h6 class=\"header-title m-t-0 m-b-30\">abcdefghijklmnopqrstuvwxyz</h6>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <canvas #chart7 [style.height.px]=\"chartHeight\"></canvas>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- end col -->\n  </div>\n\n  <!-- end row -->\n\n</div>"
+module.exports = "<div class=\"container-fluid\">\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenue class=\"card-wrapper\" [data]=\"revenue\"></informaRevenue>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Dividend Paid Comparison</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaDividendPaid class=\"card-wrapper\" [data]=\"dividend\"></informaDividendPaid>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6\">\n      <div class=\"card-panel\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Type (2016)</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaRevenuebyType class=\"card-wrapper\" [data]=\"revenueByType\"></informaRevenuebyType>\n          </div>\n        </div>\n      </div>\n      </div>\n\n    </div>\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-4 col-md-6 carousel\">\n      <div class=\"slides card-panel\">\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Region (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegion class=\"card-wrapper\"[data]=\"revenueByRegion\"></informaRevenuebyRegion>\n            </div>\n          </div>\n        </div>\n        <div class=\"card-box\">\n          <div class=\"header\">\n            <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n            <h6 class=\"header-title m-t-0 m-b-30\">Informa Revenue by Group (2016)</h6>\n          </div>\n          <div class=\"widget-chart-1\">\n            <div class=\"widget-chart-box-1\">\n              <informaRevenuebyRegionDivLevel class=\"card-wrapper\" [data]=\"revenuebyRegionDivLevel \"></informaRevenuebyRegionDivLevel>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n  </div>\n  <!-- end row -->\n\n  <div class=\"row col-lg-12 col-md-6\">\n\n    <div class=\"card-container col-lg-6 col-md-6\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Publication Journey</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaPublicationJourney class=\"card-wrapper\" [data]=\"publicationJourney\"></informaPublicationJourney>\n          </div>\n        </div>\n      </div>\n    </div>\n    <!-- end col -->\n    <!-- end col -->\n\n    <div class=\"card-container col-lg-6 col-md-12\">\n      <div class=\"card-box\">\n        <div class=\"header\">\n          <i class=\"fa fa-expand my-icon\" aria-hidden=\"true\" (click)=\"onExpandClick($event)\"></i>\n          <h6 class=\"header-title m-t-0 m-b-30\">Informa Share Price</h6>\n        </div>\n        <div class=\"widget-chart-1\">\n          <div class=\"widget-chart-box-1\">\n            <informaSharePrice class=\"card-wrapper\" [data]=\"sharePrice\"></informaSharePrice>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- end col -->\n  </div>\n\n  <!-- end row -->\n\n</div>"
 
 /***/ },
 
@@ -19399,32 +20090,285 @@ var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
 var Window_1 = __webpack_require__("./src/app/services/Window.ts");
 var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
 var dashboard_service_1 = __webpack_require__("./src/app/services/dashboard.service.ts");
+var Rx_1 = __webpack_require__("./node_modules/rxjs/Rx.js");
 var app_service_1 = __webpack_require__("./src/app/app.service.ts");
+var data_1 = __webpack_require__("./src/app/dummy/data.ts");
 var Home = (function () {
     // TypeScript public modifiers
-    function Home(appState, apiDashboardServices, winRef) {
+    function Home(appState, apiDashboardServices, winRef, eleRef) {
         this.appState = appState;
         this.apiDashboardServices = apiDashboardServices;
         this.winRef = winRef;
-        //@ViewChild('myChart1') myChart1: ElementRef;
+        this.eleRef = eleRef;
         // Set our default values
         this.localState = { value: '' };
         this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 3.4;
+        this.onExpandClick = function (event) {
+            if (!this.clicked) {
+                this.expandIcon = event.currentTarget;
+                this.expandIcon.classList.remove("fa-expand");
+                this.expandIcon.classList.add("fa-compress");
+                // getting card container-node
+                this.clickedCard = this.expandIcon.parentNode.parentNode.parentNode;
+                this.clickedCard.classList.add("fullscreen");
+                this.clickedCanvas = this.clickedCard.getElementsByTagName("canvas")[0];
+                this.clickedCanvasHeight = this.clickedCanvas.style.height;
+                this.clickedCanvas.style.height = "80vh";
+                this.clicked = true;
+            }
+            else {
+                this.expandIcon.classList.remove("fa-compress");
+                this.expandIcon.classList.add("fa-expand");
+                this.clickedCard.classList.remove("fullscreen");
+                this.clickedCanvas.style.height = this.clickedCanvasHeight;
+                this.clicked = false;
+            }
+        };
+        this.setChartPlugin();
     }
     Home.prototype.ngOnInit = function () {
-        console.log('hello `Home` component');
-        console.log('Native window obj', this.winRef.nativeWindow.innerHeight);
-        var dashboardData;
-        this.apiDashboardServices.getDashboardData().subscribe(function (response) {
-            if (response.code == 200) {
-                dashboardData = response;
-                console.log("dashboard: " + dashboardData);
-            }
-        }, function (err) {
-            console.log("failure: " + err);
+        var _this = this;
+        var data = data_1.JSON_DATA.DATA;
+        // console.log(this.carousel.nativeElement);
+        // this.carousel.nativeElement.carousel({
+        //   interval: 3000
+        // });
+        this.setDashBoardData(data);
+        // this.apiDashboardServices.getDashboardData().subscribe(response => {
+        //   if (response.status == 200) {
+        //     data = response.data.data;
+        //     console.log("dashboard: " + data);
+        //     this.setDashBoardData(data);
+        //   }
+        // }, err => {
+        //   console.log("failure: " + err);
+        // });
+        //Observable : calling service in every 10 sec to update latest data into dashboard
+        Rx_1.Observable.interval(8000).subscribe(function (x) {
+            _this.setDashBoardData(data);
+            // this.apiDashboardServices.getDashboardData().subscribe(response => {
+            //   if (response.status == 200) {
+            //     data = response.data.DATA;
+            //     console.log("dashboard: " + data);
+            //     this.setDashBoardData(data);
+            //   }
+            // }, err => {
+            //   console.log("failure: " + err);
+            // });
         });
+    };
+    Home.prototype.submitState = function (value) {
+        console.log('submitState', value);
+        this.appState.set('value', value);
+        this.localState.value = '';
+    };
+    //return chart
+    Home.prototype.setDashBoardData = function (data) {
+        if (data) {
+            this.revenue = this.getInformaRevenue(data.InformaRevenue);
+            this.dividend = this.getInformaDividend(data.Dividend);
+            this.revenueByType = this.getInformaRevenueByType(data.RevenueByType);
+            this.revenueByRegion = this.getInformaRevenueByRegion(data.RevenueByRegion);
+            this.revenuebyRegionDivLevel = this.getInformaRevenuebyRegionDivLevel(data.RevenueByRegion);
+            this.publicationJourney = this.getInformaPublicationJourney(data.PublicationJourney);
+            this.sharePrice = this.getInformaSharePrice(data.SharePrice);
+        }
+    };
+    //return revenue by type data
+    Home.prototype.getInformaRevenue = function (revenue) {
+        var division_keys = Object.keys(revenue.Divisioninfo);
+        var labels = [];
+        var datasets = [];
+        var revenueData = {};
+        for (var _i = 0, division_keys_1 = division_keys; _i < division_keys_1.length; _i++) {
+            var key = division_keys_1[_i];
+            labels.push(revenue.Divisioninfo[key]);
+        }
+        for (var _a = 0, _b = this.getKeys(revenue.Revenue); _a < _b.length; _a++) {
+            var revType = _b[_a];
+            var dataLabel = revType;
+            var data = [];
+            var dataset = [];
+            for (var _c = 0, division_keys_2 = division_keys; _c < division_keys_2.length; _c++) {
+                var key = division_keys_2[_c];
+                data.push(revenue.Revenue[revType][key]);
+            }
+            dataset['label'] = dataLabel;
+            dataset['data'] = data;
+            datasets.push(dataset);
+        }
+        revenueData['labels'] = labels;
+        revenueData['datasets'] = datasets;
+        // console.log("revenueData : " + JSON.stringify(revenueData));
+        return revenueData;
+    };
+    //return informa dividend data
+    Home.prototype.getInformaDividend = function (dividend) {
+        var company_keys = Object.keys(dividend.Companynfo);
+        var labels = [];
+        var datasets = [];
+        var dividendData = {};
+        for (var _i = 0, company_keys_1 = company_keys; _i < company_keys_1.length; _i++) {
+            var key = company_keys_1[_i];
+            labels.push(dividend.Companynfo[key]);
+        }
+        for (var _a = 0, _b = this.getKeys(dividend.Years); _a < _b.length; _a++) {
+            var year = _b[_a];
+            var dataLabel = year;
+            var data = [];
+            var dataset = [];
+            for (var _c = 0, company_keys_2 = company_keys; _c < company_keys_2.length; _c++) {
+                var key = company_keys_2[_c];
+                data.push(dividend.Years[year][key]);
+            }
+            dataset['label'] = dataLabel;
+            dataset['data'] = data;
+            datasets.push(dataset);
+        }
+        dividendData['labels'] = labels;
+        dividendData['datasets'] = datasets;
+        // console.log("dividendData : " + JSON.stringify(dividendData));
+        return dividendData;
+    };
+    //return revenue by type data
+    Home.prototype.getInformaRevenueByType = function (revenueByType) {
+        var labels = Object.keys(revenueByType.Revenuebytype);
+        var data = [];
+        var revenueByTypeData = {};
+        for (var _i = 0, labels_1 = labels; _i < labels_1.length; _i++) {
+            var label = labels_1[_i];
+            if ('Total' != label) {
+                var total = revenueByType.Revenuebytype.Total[label.replace(/\s/g, '')];
+                data.push(total);
+            }
+        }
+        revenueByTypeData['labels'] = labels;
+        revenueByTypeData['data'] = data;
+        // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
+        return revenueByTypeData;
+    };
+    //return revenue by region data
+    Home.prototype.getInformaRevenueByRegion = function (revenueByRegion) {
+        var region_keys = Object.keys(revenueByRegion.RegionInfo);
+        var labels = [];
+        var data = [];
+        var revenueByRegionData = {};
+        for (var _i = 0, region_keys_1 = region_keys; _i < region_keys_1.length; _i++) {
+            var key = region_keys_1[_i];
+            labels.push(revenueByRegion.RegionInfo[key]);
+            data.push(revenueByRegion.Region.Total[key]);
+        }
+        revenueByRegionData['labels'] = labels;
+        revenueByRegionData['data'] = data;
+        // console.log("revenueByTypeData : " + JSON.stringify(revenueByTypeData));
+        return revenueByRegionData;
+    };
+    //return revenue by region division level data
+    Home.prototype.getInformaRevenuebyRegionDivLevel = function (revenue) {
+        var division_keys = Object.keys(revenue.Divisioninfo);
+        var labels = [];
+        var datasets = [];
+        var revenueData = {};
+        for (var _i = 0, division_keys_3 = division_keys; _i < division_keys_3.length; _i++) {
+            var key = division_keys_3[_i];
+            labels.push(revenue.Divisioninfo[key]);
+        }
+        for (var _a = 0, _b = this.getKeys(revenue.Region); _a < _b.length; _a++) {
+            var region = _b[_a];
+            if ('Total' != region) {
+                var dataLabel = region;
+                var data = [];
+                var dataset = [];
+                for (var _c = 0, division_keys_4 = division_keys; _c < division_keys_4.length; _c++) {
+                    var key = division_keys_4[_c];
+                    data.push(revenue.Region[region][key]);
+                }
+                dataset['label'] = dataLabel;
+                dataset['data'] = data;
+                datasets.push(dataset);
+            }
+        }
+        revenueData['labels'] = labels;
+        revenueData['datasets'] = datasets;
+        // console.log("revenueData : " + JSON.stringify(revenueData));
+        return revenueData;
+    };
+    //return publication journey data
+    Home.prototype.getInformaPublicationJourney = function (publicationJourney) {
+        var division_keys = this.getKeys(publicationJourney.Journeyinfo);
+        var labels = [];
+        var datasets = [];
+        var revenueData = {};
+        for (var _i = 0, division_keys_5 = division_keys; _i < division_keys_5.length; _i++) {
+            var key = division_keys_5[_i];
+            labels.push(publicationJourney.Journeyinfo[key]);
+        }
+        for (var _a = 0, _b = this.getKeys(publicationJourney.Journey); _a < _b.length; _a++) {
+            var journry = _b[_a];
+            var dataLabel = journry;
+            var data = [];
+            var dataset = [];
+            for (var _c = 0, division_keys_6 = division_keys; _c < division_keys_6.length; _c++) {
+                var key = division_keys_6[_c];
+                data.push(publicationJourney.Journey[journry][key]);
+            }
+            dataset['label'] = dataLabel;
+            dataset['data'] = data;
+            datasets.push(dataset);
+        }
+        revenueData['labels'] = labels;
+        revenueData['datasets'] = datasets;
+        return revenueData;
+    };
+    //return informa share price data
+    Home.prototype.getInformaSharePrice = function (sharePrice) {
+        var daysCount = parseInt(sharePrice.DaysCount);
+        var companiesCount = parseInt(sharePrice.DaysCount);
+        var days_key = Object.keys(sharePrice.Dates);
+        var companey_key = Object.keys(sharePrice.CompanyInfo);
+        var share_key = Object.keys(sharePrice.shareprice);
+        var labels = [];
+        var company = [];
+        var shareprice = [];
+        var shareData = {};
+        for (var i = 0; i < companiesCount; i++) {
+            var companyshareprice = [];
+            for (var j = 0; j < daysCount; j++) {
+                companyshareprice[j] = sharePrice.shareprice[share_key[j]][companey_key[i]];
+            }
+            shareprice[i] = companyshareprice;
+        }
+        var datasets = [];
+        for (var i = 0; i < daysCount; i++) {
+            labels[i] = sharePrice.Dates[days_key[i]];
+            var dataLabel = sharePrice.CompanyInfo[companey_key[i]];
+            var data = [];
+            data["label"] = dataLabel;
+            data["data"] = shareprice[i];
+            datasets[i] = data;
+        }
+        shareData['labels'] = labels.reverse();
+        shareData['datasets'] = datasets;
+        // console.log("revenueData : " + JSON.stringify(revenueData));
+        return shareData;
+    };
+    //return jsonObject keys array
+    Home.prototype.getKeys = function (json) {
+        var arr_sources = Object.keys(json);
+        return arr_sources;
+    };
+    //set defult behavior for charts using chart plugin service
+    Home.prototype.setChartPlugin = function () {
+        chart_js_1.Chart.defaults.global.defaultFontSize = 14;
+        //Chart.defaults.global.legend.fontColor = '#000';
         chart_js_1.Chart.pluginService.register({
             beforeRender: function (chart) {
+                chart.options.legend.labels.boxWidth = 10;
+                chart.options.legend.labels.padding = 5;
+                chart.options.legend.position = "bottom";
+                chart.options.legend.labels.fontSize = 14;
+                chart.options.legend.labels.fontColor = "black";
+                chart.options.maintainAspectRatio = false;
                 if (chart.config.options.showAllTooltips) {
                     // create an array of tooltips
                     // we can't use the chart tooltip because there is only one tooltip per chart
@@ -19454,6 +20398,9 @@ var Home = (function () {
                     }
                     // turn on tooltips
                     chart.options.tooltips.enabled = true;
+                    chart.options.tooltips.displayColors = false;
+                    chart.options.tooltips.backgroundColor = "transparent";
+                    chart.options.tooltips.bodyFontColor = "black";
                     chart_js_1.Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
                         tooltip.initialize();
                         tooltip.update();
@@ -19465,129 +20412,11 @@ var Home = (function () {
                 }
             }
         });
-        // this.title.getData().subscribe(data => this.data = data);
-        var salesChart = this.chart1.nativeElement.getContext('2d');
-        //let setRevenueChart = this.myChart1.nativeElement.getContext('2d');
-        var data = {
-            labels: ["Q1", "Q2", "Q3", "Q4"],
-            datasets: [{
-                    label: 'books',
-                    data: [10, 19, 3, 5],
-                    backgroundColor: [
-                        'rgba(92, 184, 92, 1)',
-                        'rgba(92, 184, 92, 1)',
-                        'rgba(92, 184, 92, 1)',
-                        'rgba(92, 184, 92, 1)'
-                    ]
-                },
-                {
-                    label: 'journals',
-                    data: [15, 19, 3, 5],
-                    backgroundColor: [
-                        'rgba(91, 105, 188, 1)',
-                        'rgba(91, 105, 188, 1)',
-                        'rgba(91, 105, 188, 1)',
-                        'rgba(91, 105, 188, 1)'
-                    ]
-                }
-            ]
-        };
-        var myChart = new chart_js_1.Chart(salesChart, {
-            type: 'bar',
-            data: data,
-            options: {
-                // showAllTooltips: true,
-                maintainAspectRatio: false,
-                legend: {
-                    labels: {
-                        fontColor: "white"
-                    }
-                },
-                scales: {
-                    yAxes: [{
-                            stacked: true,
-                            ticks: {
-                                beginAtZero: true,
-                                max: 100,
-                                stepSize: 10,
-                                fontColor: "white"
-                            }
-                        }],
-                    xAxes: [{
-                            stacked: true,
-                            ticks: {
-                                beginAtZero: true,
-                                fontColor: "white"
-                            }
-                        }]
-                }
-            }
-        });
-        var piedata = {
-            labels: ["T&F", "XYZ", "ABC"],
-            datasets: [{
-                    backgroundColor: [
-                        "#2ecc71",
-                        "#3498db",
-                        "#95a5a6"
-                    ],
-                    data: [25, 25, 50]
-                }]
-        };
-        var ctx = this.chart2.nativeElement.getContext('2d');
-        var myChart1 = new chart_js_1.Chart(ctx, {
-            type: 'pie',
-            data: piedata,
-            options: {
-                showAllTooltips: true,
-                maintainAspectRatio: false,
-                legend: {
-                    labels: {
-                        fontColor: "white"
-                    }
-                },
-                animate: {
-                    animateRotate: true,
-                    duration: 1000,
-                    animateScale: true,
-                    animationSteps: 15
-                }
-            }
-        });
-    };
-    Home.prototype.submitState = function (value) {
-        console.log('submitState', value);
-        this.appState.set('value', value);
-        this.localState.value = '';
     };
     __decorate([
-        core_1.ViewChild('chart1'), 
+        core_1.ViewChild('slide1'), 
         __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
-    ], Home.prototype, "chart1", void 0);
-    __decorate([
-        core_1.ViewChild('chart2'), 
-        __metadata('design:type', (typeof (_b = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _b) || Object)
-    ], Home.prototype, "chart2", void 0);
-    __decorate([
-        core_1.ViewChild('chart3'), 
-        __metadata('design:type', (typeof (_c = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _c) || Object)
-    ], Home.prototype, "chart3", void 0);
-    __decorate([
-        core_1.ViewChild('chart4'), 
-        __metadata('design:type', (typeof (_d = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _d) || Object)
-    ], Home.prototype, "chart4", void 0);
-    __decorate([
-        core_1.ViewChild('chart5'), 
-        __metadata('design:type', (typeof (_e = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _e) || Object)
-    ], Home.prototype, "chart5", void 0);
-    __decorate([
-        core_1.ViewChild('chart6'), 
-        __metadata('design:type', (typeof (_f = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _f) || Object)
-    ], Home.prototype, "chart6", void 0);
-    __decorate([
-        core_1.ViewChild('chart7'), 
-        __metadata('design:type', (typeof (_g = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _g) || Object)
-    ], Home.prototype, "chart7", void 0);
+    ], Home.prototype, "carousel", void 0);
     Home = __decorate([
         core_1.Component({
             // The selector is what angular internally uses
@@ -19600,10 +20429,10 @@ var Home = (function () {
             template: __webpack_require__("./src/app/home/home.component.html"),
             providers: [dashboard_service_1.ApiDashboardServices]
         }), 
-        __metadata('design:paramtypes', [(typeof (_h = typeof app_service_1.AppState !== 'undefined' && app_service_1.AppState) === 'function' && _h) || Object, (typeof (_j = typeof dashboard_service_1.ApiDashboardServices !== 'undefined' && dashboard_service_1.ApiDashboardServices) === 'function' && _j) || Object, (typeof (_k = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _k) || Object])
+        __metadata('design:paramtypes', [(typeof (_b = typeof app_service_1.AppState !== 'undefined' && app_service_1.AppState) === 'function' && _b) || Object, (typeof (_c = typeof dashboard_service_1.ApiDashboardServices !== 'undefined' && dashboard_service_1.ApiDashboardServices) === 'function' && _c) || Object, (typeof (_d = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _d) || Object, (typeof (_e = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _e) || Object])
     ], Home);
     return Home;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
+    var _a, _b, _c, _d, _e;
 }());
 exports.Home = Home;
 
@@ -19633,6 +20462,777 @@ function __export(m) {
 }
 // App
 __export(__webpack_require__("./src/app/app.module.ts"));
+
+
+/***/ },
+
+/***/ "./src/app/informa-dividend-paid/informaDividendPaid.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-dividend-paid/informaDividendPaid.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaDividendPaidComponent = (function () {
+    function InformaDividendPaidComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaDividendPaidComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            for (var i = 0; i < 4; i++) {
+                this.chart.data.datasets[i].label = [];
+                this.chart.data.datasets[i].data = [];
+            }
+            this.chart.update();
+            for (var i = 0; i < 4; i++) {
+                this.chart.data.labels[i] = changes.data.currentValue.labels[i];
+                this.chart.data.datasets[i].label = changes.data.currentValue.datasets[i].label;
+                for (var j = 0; j < 4; j++) {
+                    this.chart.data.datasets[i].data[j] = changes.data.currentValue.datasets[i].data[j];
+                }
+            }
+            this.chart.update(3000);
+        }
+    };
+    InformaDividendPaidComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: [],
+                datasets: [{
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr1,
+                            chartColors.clr1,
+                            chartColors.clr1,
+                            chartColors.clr1
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr2,
+                            chartColors.clr2,
+                            chartColors.clr2,
+                            chartColors.clr2
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr3,
+                            chartColors.clr3,
+                            chartColors.clr3,
+                            chartColors.clr3
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr4,
+                            chartColors.clr4,
+                            chartColors.clr4,
+                            chartColors.clr4
+                        ]
+                    }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                showAllTooltips: true,
+                tooltips: {
+                    xAlign: 'left',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return tooltipItem.xLabel;
+                        },
+                        title: function (tooltipItem, data) {
+                            return;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            gridLines: { color: "#786C69" },
+                            display: true,
+                            scaleLabel: {
+                                display: false,
+                            }
+                        }],
+                    yAxes: [{
+                            gridLines: { color: "#786C69" },
+                            scaleLabel: {
+                                display: true,
+                            },
+                            ticks: {
+                                fontSize: 10
+                            }
+                        }],
+                }
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaDividendPaidComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaDividendPaidComponent.prototype, "data", void 0);
+    InformaDividendPaidComponent = __decorate([
+        core_1.Component({
+            selector: 'informaDividendPaid',
+            template: __webpack_require__("./src/app/informa-dividend-paid/informaDividendPaid.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaDividendPaidComponent);
+    return InformaDividendPaidComponent;
+    var _a, _b;
+}());
+exports.InformaDividendPaidComponent = InformaDividendPaidComponent;
+
+
+/***/ },
+
+/***/ "./src/app/informa-publication-journey/informaPublicationJourney.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-publication-journey/informaPublicationJourney.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaPublicationJourneyComponent = (function () {
+    function InformaPublicationJourneyComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaPublicationJourneyComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            for (var i = 0, l = this.chart.data.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = [];
+                this.chart.data.datasets[i].data = [];
+            }
+            this.chart.update();
+            this.chart.data.labels = changes.data.currentValue.labels;
+            for (var i = 0, l = changes.data.currentValue.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = changes.data.currentValue.datasets[i].label;
+                this.chart.data.datasets[i].data = changes.data.currentValue.datasets[i].data;
+            }
+            this.chart.update(3000);
+        }
+    };
+    InformaPublicationJourneyComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [],
+                datasets: [{
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr1
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr2
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: chartColors.clr3
+                    }],
+            },
+            options: {
+                textBaseline: 'bottom',
+                showAllTooltips: true,
+                tooltips: {
+                    xAlign: 'center',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return tooltipItem.yLabel;
+                        },
+                        title: function (tooltipItem, data) {
+                            return;
+                        }
+                    }
+                },
+                // scaleLineColor: "white",
+                scales: {
+                    xAxes: [{
+                            gridLines: { color: "#786C69" },
+                            stacked: true
+                        }],
+                    yAxes: [{
+                            gridLines: { color: "#786C69" },
+                            stacked: true,
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100,
+                                stepSize: 10
+                            }
+                        }]
+                }
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaPublicationJourneyComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaPublicationJourneyComponent.prototype, "data", void 0);
+    InformaPublicationJourneyComponent = __decorate([
+        core_1.Component({
+            selector: 'informaPublicationJourney',
+            template: __webpack_require__("./src/app/informa-publication-journey/informaPublicationJourney.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaPublicationJourneyComponent);
+    return InformaPublicationJourneyComponent;
+    var _a, _b;
+}());
+exports.InformaPublicationJourneyComponent = InformaPublicationJourneyComponent;
+
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-by-region/informaRevenuebyRegion.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-by-region/informaRevenuebyRegion.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaRevenuebyRegionComponent = (function () {
+    function InformaRevenuebyRegionComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaRevenuebyRegionComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            this.chart.data.datasets[0].data = [];
+            this.chart.update();
+            this.chart.data.labels = changes.data.currentValue.labels;
+            this.chart.data.datasets[0].data = changes.data.currentValue.data;
+            this.chart.update(3000);
+        }
+    };
+    InformaRevenuebyRegionComponent.prototype.ngOnInit = function () {
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [],
+                datasets: [{
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr1,
+                            chartColors.clr2,
+                            chartColors.clr3,
+                            chartColors.clr4
+                        ]
+                    }],
+            },
+            options: {
+                showAllTooltips: true,
+                elements: { arc: { borderWidth: 0 } },
+                tooltips: {
+                    xAlign: 'center',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+                        }
+                    }
+                }
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaRevenuebyRegionComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaRevenuebyRegionComponent.prototype, "data", void 0);
+    InformaRevenuebyRegionComponent = __decorate([
+        core_1.Component({
+            selector: 'informaRevenuebyRegion',
+            template: __webpack_require__("./src/app/informa-revenue-by-region/informaRevenuebyRegion.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaRevenuebyRegionComponent);
+    return InformaRevenuebyRegionComponent;
+    var _a, _b;
+}());
+exports.InformaRevenuebyRegionComponent = InformaRevenuebyRegionComponent;
+
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-by-type/informaRevenuebyType.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-by-type/informaRevenuebyType.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaRevenuebyTypeComponent = (function () {
+    function InformaRevenuebyTypeComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaRevenuebyTypeComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + JSON.stringify(changes));
+        if (this.chart) {
+            this.chart.data.labels = [];
+            this.chart.data.datasets[0].data = [];
+            this.chart.update();
+            this.chart.data.labels = changes.data.currentValue.labels;
+            this.chart.data.datasets[0].data = changes.data.currentValue.data;
+            this.chart.update(3000);
+        }
+    };
+    InformaRevenuebyTypeComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [],
+                datasets: [{
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr1,
+                            chartColors.clr2,
+                            chartColors.clr3,
+                            chartColors.clr4,
+                            chartColors.clr5
+                        ]
+                    }]
+            },
+            options: {
+                showAllTooltips: true,
+                elements: { arc: { borderWidth: 0 } },
+                tooltips: {
+                    xAlign: 'center',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+                        }
+                    }
+                },
+                maintainAspectRatio: false
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaRevenuebyTypeComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaRevenuebyTypeComponent.prototype, "data", void 0);
+    InformaRevenuebyTypeComponent = __decorate([
+        core_1.Component({
+            selector: 'informaRevenuebyType',
+            template: __webpack_require__("./src/app/informa-revenue-by-type/informaRevenuebyType.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaRevenuebyTypeComponent);
+    return InformaRevenuebyTypeComponent;
+    var _a, _b;
+}());
+exports.InformaRevenuebyTypeComponent = InformaRevenuebyTypeComponent;
+
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-division-level/informaRevenuebyRegionDivLevel.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-revenue-division-level/informaRevenuebyRegionDivLevel.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaRevenuebyRegionDivLevelComponent = (function () {
+    function InformaRevenuebyRegionDivLevelComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaRevenuebyRegionDivLevelComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            for (var i = 0, l = this.chart.data.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = [];
+                this.chart.data.datasets[i].data = [];
+            }
+            this.chart.update();
+            this.chart.data.labels = changes.data.currentValue.labels;
+            for (var i = 0, l = changes.data.currentValue.datasets.length; i < l; i++) {
+                this.chart.data.datasets[i].label = changes.data.currentValue.datasets[i].label;
+                this.chart.data.datasets[i].data = changes.data.currentValue.datasets[i].data;
+            }
+            this.chart.update(3000);
+        }
+    };
+    InformaRevenuebyRegionDivLevelComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: [],
+                datasets: [{
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr1,
+                            chartColors.clr1,
+                            chartColors.clr1,
+                            chartColors.clr1
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr2,
+                            chartColors.clr2,
+                            chartColors.clr2,
+                            chartColors.clr2
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr3,
+                            chartColors.clr3,
+                            chartColors.clr3,
+                            chartColors.clr3
+                        ]
+                    }, {
+                        label: '',
+                        data: [],
+                        backgroundColor: [
+                            chartColors.clr4,
+                            chartColors.clr4,
+                            chartColors.clr4,
+                            chartColors.clr4
+                        ]
+                    }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                showAllTooltips: true,
+                tooltips: {
+                    xAlign: 'left',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return tooltipItem.xLabel;
+                        },
+                        title: function (tooltipItem, data) {
+                            return;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            gridLines: { color: "#786C69" },
+                            ticks: {
+                                beginAtZero: true,
+                                max: 300
+                            },
+                            display: true,
+                            scaleLabel: {
+                                display: false,
+                            }
+                        }],
+                    yAxes: [{
+                            gridLines: { color: "#786C69" },
+                            scaleLabel: {
+                                display: true,
+                            },
+                            ticks: {
+                                fontSize: 10
+                            }
+                        }],
+                }
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaRevenuebyRegionDivLevelComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaRevenuebyRegionDivLevelComponent.prototype, "data", void 0);
+    InformaRevenuebyRegionDivLevelComponent = __decorate([
+        core_1.Component({
+            selector: 'informaRevenuebyRegionDivLevel',
+            template: __webpack_require__("./src/app/informa-revenue-division-level/informaRevenuebyRegionDivLevel.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaRevenuebyRegionDivLevelComponent);
+    return InformaRevenuebyRegionDivLevelComponent;
+    var _a, _b;
+}());
+exports.InformaRevenuebyRegionDivLevelComponent = InformaRevenuebyRegionDivLevelComponent;
+
+
+/***/ },
+
+/***/ "./src/app/informa-share-price/informaSharePrice.component.html":
+/***/ function(module, exports) {
+
+module.exports = "<div style=\"display: block\">\n  <canvas #baseChart [style.height.px]=\"chartHeight\"></canvas>\n</div>"
+
+/***/ },
+
+/***/ "./src/app/informa-share-price/informaSharePrice.component.ts":
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__("./node_modules/@angular/core/index.js");
+var Window_1 = __webpack_require__("./src/app/services/Window.ts");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var InformaSharePriceComponent = (function () {
+    function InformaSharePriceComponent(winRef) {
+        this.winRef = winRef;
+        this.chartHeight = parseInt(this.winRef.nativeWindow.innerHeight) / 2.8;
+    }
+    InformaSharePriceComponent.prototype.ngOnChanges = function (changes) {
+        console.log('ngOnChanges' + changes);
+        if (this.chart) {
+            this.chart.data.labels = [];
+            for (var i = 0; i < 4; i++) {
+                this.chart.data.datasets[i].label = [];
+                this.chart.data.datasets[i].data = [];
+            }
+            this.chart.update();
+            for (var i = 0; i < 7; i++) {
+                this.chart.data.labels[i] = changes.data.currentValue.labels[i];
+                for (var j = 0; j < 4; j++) {
+                    this.chart.data.datasets[j].data = changes.data.currentValue.datasets[j].data;
+                    this.chart.data.datasets[j].label = changes.data.currentValue.datasets[j].label;
+                }
+            }
+            this.chart.update(3000);
+        }
+        //level:dates
+    };
+    InformaSharePriceComponent.prototype.ngOnInit = function () {
+        var chartColors = {
+            clr1: '#addcc9',
+            clr2: '#dbebc2',
+            clr3: '#fdd2b5',
+            clr4: '#87a6d5',
+            clr5: '#f48b94',
+            clr6: '#4DB6AC',
+            clr7: '#4FC3F7',
+        };
+        var ctx = this.baseChart.nativeElement.getContext('2d');
+        this.chart = new chart_js_1.Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                        label: '',
+                        data: [],
+                        backgroundColor: [chartColors.clr1],
+                        borderColor: chartColors.clr1,
+                        borderDash: [5, 5],
+                        fill: false
+                    },
+                    {
+                        label: '',
+                        data: [],
+                        backgroundColor: [chartColors.clr2],
+                        borderColor: chartColors.clr2,
+                        borderDash: [5, 5],
+                        fill: false,
+                    },
+                    {
+                        label: '',
+                        data: [],
+                        backgroundColor: [chartColors.clr3],
+                        borderColor: chartColors.clr3,
+                        borderDash: [5, 5],
+                        fill: false,
+                    },
+                    {
+                        label: '',
+                        data: [],
+                        backgroundColor: [chartColors.clr4],
+                        borderColor: chartColors.clr4,
+                        borderDash: [5, 5],
+                        fill: false,
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false,
+                showAllTooltips: true,
+                tooltips: {
+                    xAlign: 'left',
+                    yAlign: 'center',
+                    callbacks: {
+                        // use label callback to return the desired label
+                        label: function (tooltipItem, data) {
+                            return tooltipItem.yLabel;
+                        },
+                        title: function (tooltipItem, data) {
+                            return;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: false,
+                                fontColor: "#000",
+                            }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            stacked: false,
+                            ticks: {
+                                beginAtZero: false,
+                                padding: 30,
+                                fontColor: "#000",
+                            }
+                        }]
+                },
+            }
+        });
+    };
+    __decorate([
+        core_1.ViewChild('baseChart'), 
+        __metadata('design:type', (typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object)
+    ], InformaSharePriceComponent.prototype, "baseChart", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InformaSharePriceComponent.prototype, "data", void 0);
+    InformaSharePriceComponent = __decorate([
+        core_1.Component({
+            selector: 'informaSharePrice',
+            template: __webpack_require__("./src/app/informa-share-price/informaSharePrice.component.html")
+        }), 
+        __metadata('design:paramtypes', [(typeof (_b = typeof Window_1.WindowRef !== 'undefined' && Window_1.WindowRef) === 'function' && _b) || Object])
+    ], InformaSharePriceComponent);
+    return InformaSharePriceComponent;
+    var _a, _b;
+}());
+exports.InformaSharePriceComponent = InformaSharePriceComponent;
 
 
 /***/ },
@@ -19943,10 +21543,10 @@ var ApiService = (function () {
     Object.defineProperty(ApiService, "API_DASHBOARD_DATA_ENDPOINT", {
         get: function () {
             switch ("local") {
-                case 'local': return 'http://localhost:3000/books';
-                case 'dev': return 'https://dev.taylorfrancis.com/books/';
-                case 'uat': return 'https://uat.taylorfrancis.com/books/';
-                case 'prod': return 'https://www.taylorfrancis.com/books/';
+                case 'local': return 'http://localhost:8080/dashboardservice/api/v1/data/getData';
+                case 'dev': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'uat': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
+                case 'prod': return 'https://kpi-dashboard-ui.herokuapp.com/api/v1/data/getData';
                 default: return '';
             }
         },
