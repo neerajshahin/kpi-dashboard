@@ -96,7 +96,7 @@ export class InformaSharePriceComponent {
                     callbacks: {
                         // use label callback to return the desired label
                         label: function (tooltipItem, data) {
-                            return tooltipItem.yLabel;
+                            return "£ "+tooltipItem.yLabel;
                         },
                         title: function (tooltipItem, data) {
                             return;
@@ -115,8 +115,9 @@ export class InformaSharePriceComponent {
                         display: true,
                         stacked: false,
                         ticks: {
-                            beginAtZero: false,
-                            padding: 30,
+                            beginAtZero: true,
+                            max: 800,
+                            stepSize: 200,
                             fontColor: "#000",
                         }
                     }]

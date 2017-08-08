@@ -65,7 +65,7 @@ export class InformaRevenuebyRegionComponent {
           callbacks: {
             // use label callback to return the desired label
             label: function (tooltipItem, data) {
-              return Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
+              return "£ "+Math.round(data.datasets[0].data[tooltipItem.index]).toFixed(1);
             }
           }
         }
